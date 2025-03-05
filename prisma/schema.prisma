@@ -1,0 +1,177 @@
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["relationJoins"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+// --------------------------------------------- //
+// STORIES
+model stories {
+    story_id     String      @id @default(cuid())
+    title        String
+    author_id    String
+    genre        String
+    description  String?
+    cover_image  String
+    price        Float       @default(0.0)
+    status       Status @default(DRAFT)
+    published_at DateTime    @default(now())
+
+    like_counts    Int   @default(0)
+    comment_counts Int   @default(0)
+    rating_avg     Float @default(0)
+
+    chapters       chapters[]
+    ratings        ratings[]
+    story_likes    story_likes[]
+    story_comments story_comments[]
+}
+
+model chapters {
+    chapter_id     String      @id @default(cuid())
+    title          String
+    chapter_number Int
+    content        String
+    status         Status @default(DRAFT)
+    published_at   DateTime    @default(now())
+
+    story     stories     @relation(fields: [story_id], references: [story_id], onDelete: Cascade)
+    story_id  String
+    bookmarks bookmarks[]
+}
+
+enum Status {
+    DRAFT
+    PUBLISHED
+    ARCHIVED
+}
+
+model bookmarks {
+    bookmark_id   String   @id @default(cuid())
+    bookmarked_at DateTime @default(now())
+
+    user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+    user_id String
+
+    chapter    chapters @relation(fields: [chapter_id], references: [chapter_id], onDelete: Cascade)
+    chapter_id String
+
+    @@unique([user_id, chapter_id])
+}
+
+model story_likes {
+    like_id  String   @id @default(cuid())
+    liked_at DateTime @default(now())
+
+    user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+    user_id String
+
+    story    stories @relation(fields: [story_id], references: [story_id], onDelete: Cascade)
+    story_id String
+
+    @@unique([user_id, story_id])
+}
+
+model story_comments {
+    comment_id   String   @id @default(cuid())
+    commented_at DateTime @default(now())
+    content      String // Added a content field
+
+    user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+    user_id String
+
+    story    stories @relation(fields: [story_id], references: [story_id], onDelete: Cascade)
+    story_id String
+}
+
+model ratings {
+    rating_id String   @id @default(cuid())
+    rated_at  DateTime @default(now())
+    score     Float    @default(0) // check ratings between 1-5
+
+    user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+    user_id String
+
+    story    stories @relation(fields: [story_id], references: [story_id], onDelete: Cascade)
+    story_id String
+
+    @@unique([user_id, story_id])
+}
+
+// --------------------------------------------- //
+// BLOGS
+model blogs {
+    blog_id String @id @default(cuid())
+    title   String
+    content String
+    status  Status
+
+    author        users           @relation(fields: [author_id], references: [user_id], onDelete: Cascade)
+    author_id     String
+    blog_likes    blog_likes[]
+    blog_comments blog_comments[]
+}
+
+model blog_likes {
+    like_id  String   @id @default(cuid())
+    liked_at DateTime @default(now())
+
+    user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+    user_id String
+
+    blog    blogs  @relation(fields: [blog_id], references: [blog_id], onDelete: Cascade)
+    blog_id String
+
+    @@unique([user_id, blog_id])
+}
+
+model blog_comments {
+    comment_id   String   @id @default(cuid())
+    commented_at DateTime @default(now())
+
+    user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+    user_id String
+
+    blog    blogs  @relation(fields: [blog_id], references: [blog_id], onDelete: Cascade)
+    blog_id String
+
+    @@unique([user_id, blog_id])
+}
+
+// --------------------------------------------- //
+// USERS
+model users {
+    user_id      String   @id @default(cuid())
+    google_id    String?  @unique
+    username     String   @unique
+    email        String   @unique
+    phone_number String?  @unique
+    password     String
+    role         UserRole @default(USER)
+    fullname     String?
+    profile_pic  String?
+    created_at   DateTime @default(now())
+    is_verified  Boolean  @default(false)
+
+    reset_password_token            String?   @unique
+    reset_password_token_expires_at DateTime?
+    verification_token              String?   @unique
+    verification_token_expires_at   DateTime?
+
+    bookmarks      bookmarks[]
+    story_likes    story_likes[]
+    story_comments story_comments[]
+    story_ratings  ratings[]
+    blogs          blogs[]
+    blog_likes     blog_likes[]
+    blog_comments  blog_comments[]
+}
+
+enum UserRole {
+    USER
+    ADMIN
+}
