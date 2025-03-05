@@ -11,33 +11,49 @@ datasource db {
 // --------------------------------------------- //
 // STORIES
 model stories {
-    story_id     String      @id @default(cuid())
+    story_id     String   @id @default(cuid())
     title        String
     author_id    String
-    genre        String
     description  String?
     cover_image  String
-    price        Float       @default(0.0)
-    status       Status @default(DRAFT)
-    published_at DateTime    @default(now())
+    price        Float    @default(0.0)
+    status       Status   @default(DRAFT)
+    published_at DateTime @default(now())
 
     like_counts    Int   @default(0)
     comment_counts Int   @default(0)
     rating_avg     Float @default(0)
 
-    chapters       chapters[]
-    ratings        ratings[]
+    story_chapters chapters[]
+    story_ratings  ratings[]
     story_likes    story_likes[]
     story_comments story_comments[]
+    story_genres   story_genres[]
+}
+
+model genres {
+    genre_id     String         @id @default(cuid())
+    name         String         @unique
+    story_genres story_genres[]
+}
+
+model story_genres {
+    story_id String
+    genre_id String
+
+    story stories @relation(fields: [story_id], references: [story_id], onDelete: Cascade)
+    genre genres  @relation(fields: [genre_id], references: [genre_id], onDelete: Cascade)
+
+    @@id([story_id, genre_id])
 }
 
 model chapters {
-    chapter_id     String      @id @default(cuid())
+    chapter_id     String   @id @default(cuid())
     title          String
     chapter_number Int
     content        String
-    status         Status @default(DRAFT)
-    published_at   DateTime    @default(now())
+    status         Status   @default(DRAFT)
+    published_at   DateTime @default(now())
 
     story     stories     @relation(fields: [story_id], references: [story_id], onDelete: Cascade)
     story_id  String
