@@ -12,11 +12,53 @@ import {
 } from "../config/nodemailer.js";
 
 export const getAllUsers = async (req, res) => {
+  let {
+    limit,
+    page,
+    sort = "username",
+    order = "desc",
+    filter_value,
+  } = req.query;
+
   try {
-    const users = await prisma.users.findMany();
+    if (!["username", "fullname", "created_at"].includes(sort)) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid sort field" });
+    }
+
+    if (!["asc", "desc"].includes(order)) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Invalid order field" });
+    }
+
+    const pageSize = parseInt(limit);
+    const currentPage = parseInt(page) || 1;
+
+    let whereCondition = {};
+    if (filter_value) {
+      whereCondition = {
+        OR: [
+          { username: { contains: filter_value, mode: "insensitive" } },
+          { fullname: { contains: filter_value, mode: "insensitive" } },
+          { email: { contains: filter_value, mode: "insensitive" } },
+          { phone_number: { contains: filter_value, mode: "insensitive" } },
+        ],
+      };
+    }
+
+    const users = await prisma.users.findMany({
+      where: whereCondition,
+      ...(pageSize > 0
+        ? { take: pageSize, skip: (currentPage - 1) * pageSize }
+        : {}),
+      orderBy: { [sort]: order },
+    });
 
     return res.status(200).json({ success: true, data: users });
   } catch (error) {
+    console.error("Error get all users", error);
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
