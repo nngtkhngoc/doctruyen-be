@@ -6,7 +6,7 @@ export const createGenreValidator = Joi.object({
     .min(4)
     .max(255)
     .messages({
-      "string.empty": "Genre name must no be empty",
+      "string.empty": "Genre name must not be empty",
       "string.pattern.base": "Genre name is unvalid",
       "string.min": "Genre name must be at least 4 characters",
       "string.max": "Genre name must not be over 255 characters",

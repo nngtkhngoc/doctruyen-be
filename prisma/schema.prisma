@@ -13,8 +13,8 @@ datasource db {
 model stories {
     story_id     String   @id @default(cuid())
     title        String
-    author_id    String
-    description  String?
+    author_name  String
+    description  String
     cover_image  String
     price        Float    @default(0.0)
     status       Status   @default(DRAFT)
@@ -95,7 +95,7 @@ model story_likes {
 model story_comments {
     comment_id   String   @id @default(cuid())
     commented_at DateTime @default(now())
-    content      String // Added a content field
+    content      String
 
     user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
     user_id String
