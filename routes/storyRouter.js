@@ -5,12 +5,14 @@ import {
   getAllStories,
   getStory,
   createStory,
+  deleteStory,
 } from "../controllers/storyController.js";
 
 const router = express.Router();
 
 router.get("/get-all", getAllStories);
 router.get("/get/story_id", getStory);
-router.post("/create", createStory);
+router.post("/create", verifyToken, verifyAdmin, createStory);
+router.post("/delete/:story_id", verifyToken, verifyAdmin, deleteStory);
 
 export default router;

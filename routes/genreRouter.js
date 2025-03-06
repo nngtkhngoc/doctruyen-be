@@ -14,6 +14,6 @@ const router = express.Router();
 router.get("/get-all", getAllGenres);
 router.get("/get-details/:genre_id", getGenre);
 router.post("/create", verifyToken, verifyAdmin, createGenre);
-router.post("/delete/:genre_id", deleteGenre);
+router.post("/delete/:genre_id", verifyToken, verifyAdmin, deleteGenre);
 
 export default router;

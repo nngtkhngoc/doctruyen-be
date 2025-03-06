@@ -47,14 +47,19 @@ export const getAllStories = async (req, res) => {
       orderBy: { [sort]: order },
       include: {
         story_genres: {
-          include: {
-            genre: true,
+          select: {
+            genre: { select: { name: true } },
           },
         },
       },
     });
 
-    return res.status(200).json({ success: true, data: stories });
+    const formattedStories = stories.map((story) => ({
+      ...story,
+      story_genres: story.story_genres.map((g) => g.genre.name),
+    }));
+
+    return res.status(200).json({ success: true, data: formattedStories });
   } catch (error) {
     console.error("Error get all stories", error);
     return res
@@ -85,9 +90,57 @@ export const createStory = async (req, res) => {
   const data = req.body;
   try {
     await createStoryValidator.validateAsync(data);
-  } catch (error) {}
+
+    const createdStory = await prisma.stories.create({
+      data: {
+        title: data.title,
+        author_name: data.author_name,
+        description: data.description,
+        cover_image: data.cover_image,
+        story_genres: {
+          create: data.genres.map((genre) => ({
+            genre: {
+              connectOrCreate: {
+                where: { name: genre },
+                create: { name: genre },
+              },
+            },
+          })),
+        },
+      },
+      include: {
+        story_genres: { select: { genre: { select: { name: true } } } },
+      },
+    });
+
+    return res.status(201).json({ success: true, data: createdStory });
+  } catch (error) {
+    if (error.isJoi) {
+      return res.status(400).json({
+        success: false,
+        message: error.details.map((err) => err.message),
+      });
+    }
+    console.error("Error creating story", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
 };
 
 export const updateStory = async (req, res) => {};
 
-export const deleteStory = async (req, res) => {};
+export const deleteStory = async (req, res) => {
+  const { story_id } = req.params;
+  try {
+    await prisma.stories.delete({ where: { story_id } });
+
+    return res
+      .status(200)
+      .json({ success: true, message: "Delete story successfully" });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
