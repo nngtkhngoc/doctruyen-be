@@ -172,6 +172,7 @@ model users {
     profile_pic  String?
     created_at   DateTime @default(now())
     is_verified  Boolean  @default(false)
+    is_banned    Boolean  @default(false)
 
     reset_password_token            String?   @unique
     reset_password_token_expires_at DateTime?

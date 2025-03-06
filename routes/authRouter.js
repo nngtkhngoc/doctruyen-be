@@ -9,6 +9,7 @@ import {
   getResetPasswordToken,
   resetPassword,
   updateUser,
+  banUser,
 } from "../controllers/authController.js";
 import { verifyToken } from "../middleware/verifyToken.js";
 import { verifyAdmin } from "../middleware/verifyAdmin.js";
@@ -28,5 +29,7 @@ router.post("/verify", verifyEmail);
 
 router.post("/get-reset-password-token", getResetPasswordToken);
 router.post("/reset-password/:reset_password_token", resetPassword);
+
+router.put("/ban-user", verifyToken, verifyAdmin, banUser);
 
 export default router;

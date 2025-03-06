@@ -406,3 +406,28 @@ export const resetPassword = async (req, res) => {
       .json({ success: false, message: "Internal Server Error" });
   }
 };
+
+export const banUser = async (req, res) => {
+  const { user_id } = req.body;
+  try {
+    const bannedUser = await prisma.users.update({
+      where: { user_id },
+      data: { is_banned: true },
+    });
+
+    if (!bannedUser) {
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
+    }
+
+    return res
+      .status(200)
+      .json({ success: true, message: "Ban user successfully" });
+  } catch (error) {
+    console.log("Error ban user:", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
