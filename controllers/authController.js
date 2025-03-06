@@ -2,6 +2,7 @@ import bcrypt from "bcryptjs";
 import {
   signUpValidator,
   resetPasswordValidator,
+  updateUserValidator,
 } from "../validation/authValidation.js";
 import { prisma } from "../config/db.js";
 import generateTokenAndSetCookie from "../utils/generateTokenAndSetCookie.js";
@@ -219,6 +220,40 @@ export const signOut = async (req, res) => {
       .json({ success: true, message: "Sign out successfully" });
   } catch (error) {
     console.log("Error sign out:", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const updateUser = async (req, res) => {
+  const data = req.body;
+  const user_id = req.user_id;
+  try {
+    console.log("id:", user_id);
+    await updateUserValidator.validateAsync(data);
+
+    const updatedUser = await prisma.users.update({ where: { user_id }, data });
+
+    if (!updatedUser) {
+      return res
+        .status(404)
+        .json({ success: false, message: "User not found" });
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: "Update user successfully",
+      data: updatedUser,
+    });
+  } catch (error) {
+    if (error.isJoi) {
+      return res.status(400).json({
+        success: false,
+        message: error.details.map((err) => err.message),
+      });
+    }
+    console.log("Error update user: ", error);
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
