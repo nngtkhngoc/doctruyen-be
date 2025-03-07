@@ -78,6 +78,7 @@ export const getStory = async (req, res) => {
       where: { story_id },
       include: {
         story_genres: { select: { genre: { select: { name: true } } } },
+        story_chapters: true,
       },
     });
 

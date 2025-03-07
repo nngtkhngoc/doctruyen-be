@@ -1,7 +1,7 @@
 import Joi from "@hapi/joi";
 
 export const createStoryValidator = Joi.object({
-  title: Joi.string().min(4).max(255).required().messages({
+  title: Joi.string().min(1).max(255).required().messages({
     "any.required": "Story title is required",
     "string.empty": "Story title must not be empty",
     "string.min": "Story title must be at least 4 characters",
@@ -30,6 +30,7 @@ export const createStoryValidator = Joi.object({
     "number.min": "Story price must be at least 0$.",
   }),
   status: Joi.string(),
+  progress: Joi.string(),
   genres: Joi.array().items(Joi.string()).min(1).required(),
 });
 
