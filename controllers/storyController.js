@@ -150,6 +150,7 @@ export const updateStory = async (req, res) => {
   const data = req.body;
 
   try {
+    await updateStoryValidator.validateAsync(data);
     const genres = data.genres || [];
 
     if (data.genres) {
@@ -184,6 +185,12 @@ export const updateStory = async (req, res) => {
 
     return res.status(200).json({ success: true, data: formattedStory });
   } catch (error) {
+    if (error.isJoi) {
+      return res.status(400).json({
+        success: false,
+        message: error.details.map((err) => err.message),
+      });
+    }
     console.log("Error update story: ", error);
     return res
       .status(500)
