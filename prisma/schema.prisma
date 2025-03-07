@@ -18,6 +18,7 @@ model stories {
     cover_image  String
     price        Float    @default(0.0)
     status       Status   @default(DRAFT)
+    progress     Progress @default(ON_GOING)
     published_at DateTime @default(now())
 
     like_counts    Int   @default(0)
@@ -64,6 +65,12 @@ enum Status {
     DRAFT
     PUBLISHED
     ARCHIVED
+}
+
+enum Progress {
+    ON_GOING
+    COMPLETED
+    DROP
 }
 
 model bookmarks {

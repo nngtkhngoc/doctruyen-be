@@ -61,4 +61,5 @@ export const updateStoryValidator = Joi.object({
   }),
   status: Joi.string(),
   genres: Joi.array().items(Joi.string()).min(1),
+  progress: Joi.string(),
 });
