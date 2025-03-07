@@ -1,5 +1,8 @@
 import { prisma } from "../config/db.js";
-import { createStoryValidator } from "../validation/storyValidation.js";
+import {
+  createStoryValidator,
+  updateStoryValidator,
+} from "../validation/storyValidation.js";
 
 export const getAllStories = async (req, res) => {
   let { limit, page, sort = "title", order = "desc", filter_value } = req.query;
@@ -71,10 +74,19 @@ export const getAllStories = async (req, res) => {
 export const getStory = async (req, res) => {
   const { story_id } = req.params;
   try {
-    const story = await prisma.stories.findUnique({ where: { story_id } });
+    const story = await prisma.stories.findUnique({
+      where: { story_id },
+      include: {
+        story_genres: { select: { genre: { select: { name: true } } } },
+      },
+    });
 
     if (story) {
-      return res.status(200).json({ success: true, data: story });
+      const formattedStory = {
+        ...story,
+        story_genres: story.story_genres.map((g) => g.genre.name),
+      };
+      return res.status(200).json({ success: true, data: formattedStory });
     }
 
     return res.status(404).json({ success: false, message: "Story not found" });
@@ -113,7 +125,12 @@ export const createStory = async (req, res) => {
       },
     });
 
-    return res.status(201).json({ success: true, data: createdStory });
+    const formattedStories = {
+      ...createdStory,
+      story_genres: createdStory.story_genres.map((g) => g.genre.name),
+    };
+
+    return res.status(201).json({ success: true, data: formattedStories });
   } catch (error) {
     if (error.isJoi) {
       return res.status(400).json({
@@ -128,7 +145,51 @@ export const createStory = async (req, res) => {
   }
 };
 
-export const updateStory = async (req, res) => {};
+export const updateStory = async (req, res) => {
+  const { story_id } = req.params;
+  const data = req.body;
+
+  try {
+    const genres = data.genres || [];
+
+    if (data.genres) {
+      delete data.genres;
+    }
+
+    const updatedStory = await prisma.stories.update({
+      where: { story_id },
+      data: {
+        ...data,
+        story_genres: {
+          deleteMany: { story_id },
+          create: genres.map((genre) => ({
+            genre: {
+              connectOrCreate: {
+                where: { name: genre },
+                create: { name: genre },
+              },
+            },
+          })),
+        },
+      },
+      include: {
+        story_genres: { select: { genre: { select: { name: true } } } },
+      },
+    });
+
+    const formattedStory = {
+      ...updatedStory,
+      story_genres: updatedStory.story_genres.map((g) => g.genre.name),
+    };
+
+    return res.status(200).json({ success: true, data: formattedStory });
+  } catch (error) {
+    console.log("Error update story: ", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
 
 export const deleteStory = async (req, res) => {
   const { story_id } = req.params;
