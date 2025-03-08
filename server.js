@@ -4,7 +4,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { routes } from "./routes/index.js";
 import cookieParser from "cookie-parser";
-import { v2 as cloudinary } from "cloudinary";
 
 dotenv.config();
 const app = express();
