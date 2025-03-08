@@ -3,6 +3,7 @@ import {
   createStoryValidator,
   updateStoryValidator,
 } from "../validation/storyValidation.js";
+import cloudinary from "../config/cloudinary.js";
 
 export const getAllStories = async (req, res) => {
   let { limit, page, sort = "title", order = "desc", filter_value } = req.query;
@@ -123,6 +124,9 @@ export const createStory = async (req, res) => {
   try {
     await createStoryValidator.validateAsync(data);
 
+    const uploadRes = await cloudinary.uploader.upload(data.cover_image);
+    data.cover_image = uploadRes.secure_url;
+
     const createdStory = await prisma.stories.create({
       data: {
         title: data.title,
@@ -175,6 +179,11 @@ export const updateStory = async (req, res) => {
 
     if (data.genres) {
       delete data.genres;
+    }
+
+    if (data.cover_image) {
+      const uploadRes = await cloudinary.uploader.upload(data.cover_image);
+      data.cover_image = uploadRes.secure_url;
     }
 
     const updatedStory = await prisma.stories.update({

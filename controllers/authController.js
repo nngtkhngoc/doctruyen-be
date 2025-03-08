@@ -11,6 +11,7 @@ import {
   sendVerificationEmail,
   sendResetPasswordEmail,
 } from "../config/nodemailer.js";
+import cloudinary from "../config/cloudinary.js";
 
 export const getAllUsers = async (req, res) => {
   let {
@@ -270,8 +271,12 @@ export const updateUser = async (req, res) => {
   const data = req.body;
   const user_id = req.user_id;
   try {
-    console.log("id:", user_id);
     await updateUserValidator.validateAsync(data);
+
+    if (data.profile_pic) {
+      const uploadRes = await cloudinary.uploader.upload(data.profile_pic);
+      data.profile_pic = uploadRes.secure_url;
+    }
 
     const updatedUser = await prisma.users.update({ where: { user_id }, data });
 

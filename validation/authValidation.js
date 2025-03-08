@@ -115,4 +115,5 @@ export const updateUserValidator = Joi.object({
       "string.min": "Fullname must be at least 6 characters",
       "string.max": "Fullname must not be over 255 characters",
     }),
+  profile_pic: Joi.string(),
 });
