@@ -1,10 +1,22 @@
 import { prisma } from "../config/db.js";
 import { createChapterValidator } from "../validation/chapterValidation.js";
 import { updateStoryValidator } from "../validation/storyValidation.js";
+
 export const getAllChapters = async (req, res) => {
+  let { limit, page } = req.query;
   const { story_id } = req.params;
+
   try {
-    const chapters = await prisma.chapters.findMany({ where: { story_id } });
+    const pageSize = parseInt(limit);
+    const currentPage = parseInt(page) || 1;
+
+    const chapters = await prisma.chapters.findMany({
+      where: { story_id },
+      ...(pageSize > 0
+        ? { take: pageSize, skip: (currentPage - 1) * pageSize }
+        : {}),
+      orderBy: { chapter_number: "desc" },
+    });
 
     if (chapters) {
       return res.status(200).json({ success: true, data: chapters });
