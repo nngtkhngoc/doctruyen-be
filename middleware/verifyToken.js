@@ -20,6 +20,7 @@ export const verifyToken = async (req, res, next) => {
 
     req.user_id = user.user_id;
     req.role = user.role;
+    req.is_banned = user.is_banned;
 
     next();
   } catch (err) {

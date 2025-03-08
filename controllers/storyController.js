@@ -54,6 +54,14 @@ export const getAllStories = async (req, res) => {
             genre: { select: { name: true } },
           },
         },
+        story_comments: {
+          select: {
+            user: { select: { username: true } },
+            comment_id: true,
+            commented_at: true,
+            content: true,
+          },
+        },
       },
     });
 
@@ -77,8 +85,19 @@ export const getStory = async (req, res) => {
     const story = await prisma.stories.findUnique({
       where: { story_id },
       include: {
-        story_genres: { select: { genre: { select: { name: true } } } },
-        story_chapters: true,
+        story_genres: {
+          select: {
+            genre: { select: { name: true } },
+          },
+        },
+        story_comments: {
+          select: {
+            user: { select: { username: true } },
+            comment_id: true,
+            commented_at: true,
+            content: true,
+          },
+        },
       },
     });
 
@@ -175,7 +194,19 @@ export const updateStory = async (req, res) => {
         },
       },
       include: {
-        story_genres: { select: { genre: { select: { name: true } } } },
+        story_genres: {
+          select: {
+            genre: { select: { name: true } },
+          },
+        },
+        story_comments: {
+          select: {
+            user: { select: { username: true } },
+            comment_id: true,
+            commented_at: true,
+            content: true,
+          },
+        },
       },
     });
 

@@ -1,26 +1,5 @@
 import { prisma } from "../config/db.js";
 
-export const getAllLikesForStory = async (req, res) => {
-  const { story_id } = req.params;
-
-  try {
-    const likes = await prisma.story_likes.findMany({
-      where: { story_id },
-      select: {
-        liked_at: true,
-        user: { select: { username: true } },
-      },
-    });
-
-    return res.status(200).json({ success: true, data: likes });
-  } catch (error) {
-    console.log("Error get all likes for story:", error);
-    return res
-      .status(500)
-      .json({ success: false, message: "Internal Server Error" });
-  }
-};
-
 export const updateLikes = async (req, res, next) => {
   const { action, story_id } = req.params;
   const user_id = req.user_id;
@@ -45,6 +24,27 @@ export const updateLikes = async (req, res, next) => {
   } catch (error) {
     console.log("Error like story", error);
     console.log(user_id, " ", action, " ", story_id);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const updateStoryLikes = async (req, res) => {
+  const { story_id } = req;
+  try {
+    const count = await prisma.story_likes.count({
+      where: { story_id },
+    });
+
+    await prisma.stories.update({
+      where: { story_id },
+      data: { like_counts: count },
+    });
+
+    return res.status(200).json({ story_id, like_counts: count });
+  } catch (error) {
+    console.log("Error update story likes middleware:", error);
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });

@@ -55,6 +55,26 @@ export const getAllUsers = async (req, res) => {
         ? { take: pageSize, skip: (currentPage - 1) * pageSize }
         : {}),
       orderBy: { [sort]: order },
+      include: {
+        story_likes: {
+          select: { story: { select: { title: true } }, liked_at: true },
+        },
+        story_comments: {
+          select: {
+            story: { select: { title: true } },
+            commented_at: true,
+            comment_id: true,
+            content: true,
+          },
+        },
+        story_ratings: {
+          select: {
+            story: { select: { title: true } },
+            rated_at: true,
+            score: true,
+          },
+        },
+      },
     });
 
     return res.status(200).json({ success: true, data: users });
@@ -74,6 +94,26 @@ export const getUser = async (req, res) => {
         password: true,
       },
       where: { user_id },
+      include: {
+        story_likes: {
+          select: { story: { select: { title: true } }, liked_at: true },
+        },
+        story_comments: {
+          select: {
+            story: { select: { title: true } },
+            commented_at: true,
+            comment_id: true,
+            content: true,
+          },
+        },
+        story_ratings: {
+          select: {
+            story: { select: { title: true } },
+            rated_at: true,
+            score: true,
+          },
+        },
+      },
     });
 
     if (user) {

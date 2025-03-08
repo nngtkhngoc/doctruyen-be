@@ -3,6 +3,7 @@ import genreRouter from "./genreRouter.js";
 import storyRouter from "./storyRouter.js";
 import chapterRouter from "./chapterRouter.js";
 import likeStoryRouter from "./likeStoryRouter.js";
+import commentStoryRouter from "./commentStoryRouter.js";
 
 export const routes = (app) => {
   app.use("/api/auth", authRouter);
@@ -10,4 +11,5 @@ export const routes = (app) => {
   app.use("/api/story", storyRouter);
   app.use("/api/chapter", chapterRouter);
   app.use("/api/like_story", likeStoryRouter);
+  app.use("/api/comment_story", commentStoryRouter);
 };
