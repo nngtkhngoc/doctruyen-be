@@ -24,7 +24,7 @@ router.post("/sign-in", signIn);
 router.post("/sign-out", signOut);
 router.put("/update", verifyToken, updateUser);
 
-router.get("/get-verification-token/:user_id", getVerificationToken);
+router.get("/get-verification-token", verifyToken, getVerificationToken);
 router.post("/verify", verifyEmail);
 
 router.post("/get-reset-password-token", getResetPasswordToken);
