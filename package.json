@@ -7,6 +7,9 @@
     "build": "npm install",
     "dev": "nodemon server.js"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "keywords": [],
   "author": "",
   "type": "module",
