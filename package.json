@@ -3,12 +3,9 @@
   "version": "1.0.0",
   "main": "./server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npx prisma generate && node server.js",
     "build": "npm install",
     "dev": "nodemon server.js"
-  },
-  "engines": {
-    "node": "18.x"
   },
   "keywords": [],
   "author": "",
