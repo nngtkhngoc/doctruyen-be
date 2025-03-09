@@ -1,8 +1,5 @@
 import { prisma } from "../config/db.js";
-import {
-  createBlogValidator,
-  updateBlogValidator,
-} from "../validation/blogValidation.js";
+import { createBlogValidator } from "../validation/blogValidation.js";
 import cloudinary from "../config/cloudinary.js";
 
 export const getAllBlogs = async (req, res) => {

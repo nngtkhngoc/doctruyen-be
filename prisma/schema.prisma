@@ -131,7 +131,6 @@ model blogs {
     title       String
     content     String
     cover_image String
-    status      Status   @default(DRAFT)
     created_at  DateTime @default(now())
 
     author    users  @relation(fields: [author_id], references: [user_id], onDelete: Cascade)
