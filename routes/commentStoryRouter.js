@@ -16,6 +16,6 @@ router.post(
   createStoryComment
 );
 router.post("/delete/:comment_id", verifyToken, deleteStoryComment);
-router.get("/get-all-for-users", verifyToken, getAllCommentsForUser);
+router.get("/get-all-for-user", verifyToken, getAllCommentsForUser);
 router.get("/get-all-for-story/:story_id", getAllCommentsForStory);
 export default router;
