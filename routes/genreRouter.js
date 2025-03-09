@@ -2,7 +2,7 @@ import {
   createGenre,
   deleteGenre,
   getAllGenres,
-  getGenre,
+  getGenre, 
 } from "../controllers/genreController.js";
 
 import express from "express";

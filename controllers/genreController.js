@@ -16,7 +16,18 @@ export const getAllGenres = async (req, res) => {
 export const getGenre = async (req, res) => {
   const { genre_id } = req.params;
   try {
-    const genre = await prisma.genres.findUnique({ where: { genre_id } });
+    const genre = await prisma.genres.findUnique({
+      where: { genre_id },
+      include: {
+        story_genres: {
+          include: {
+            story: true,
+          },
+          omit: { genre_id, story_id: true },
+        },
+      },
+      omit: { genre_id: true },
+    });
 
     if (genre) {
       return res.status(200).json({ success: true, data: genre });
@@ -24,7 +35,7 @@ export const getGenre = async (req, res) => {
 
     return res.status(404).json({ success: false, message: "Genre not found" });
   } catch (error) {
-    console.log("Error get genre    :", error);
+    console.log("Error get genre:", error);
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
