@@ -10,13 +10,9 @@ export const getAllStories = async (req, res) => {
 
   try {
     if (
-      ![
-        "title",
-        "like_counts",
-        "rating_avg",
-        "published_at",
-        "price",
-      ].includes(sort)
+      !["title", "like_counts", "rating_avg", "published_at", "price"].includes(
+        sort
+      )
     ) {
       return res
         .status(400)
@@ -123,15 +119,19 @@ export const createStory = async (req, res) => {
   try {
     await createStoryValidator.validateAsync(data);
 
-    const uploadRes = await cloudinary.uploader.upload(data.cover_image);
-    data.cover_image = uploadRes.secure_url;
+    if (data.cover_image) {
+      const uploadRes = await cloudinary.uploader.upload(data.cover_image);
+      data.cover_image = uploadRes.secure_url;
+    }
 
     const createdStory = await prisma.stories.create({
       data: {
         title: data.title,
         author_name: data.author_name,
         description: data.description,
-        cover_image: data.cover_image,
+        cover_image: data.cover_image || "",
+        status: data.status || "DRAFT",
+        progress: data.progress || "ON_GOING",
         story_genres: {
           create: data.genres.map((genre) => ({
             genre: {
