@@ -128,41 +128,15 @@ model ratings {
 // --------------------------------------------- //
 // BLOGS
 model blogs {
-    blog_id String @id @default(cuid())
-    title   String
-    content String
-    status  Status
+    blog_id     String   @id @default(cuid())
+    title       String
+    content     String
+    cover_image String
+    status      Status   @default(DRAFT)
+    created_at  DateTime @default(now())
 
-    author        users           @relation(fields: [author_id], references: [user_id], onDelete: Cascade)
-    author_id     String
-    blog_likes    blog_likes[]
-    blog_comments blog_comments[]
-}
-
-model blog_likes {
-    like_id  String   @id @default(cuid())
-    liked_at DateTime @default(now())
-
-    user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
-    user_id String
-
-    blog    blogs  @relation(fields: [blog_id], references: [blog_id], onDelete: Cascade)
-    blog_id String
-
-    @@unique([user_id, blog_id])
-}
-
-model blog_comments {
-    comment_id   String   @id @default(cuid())
-    commented_at DateTime @default(now())
-
-    user    users  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
-    user_id String
-
-    blog    blogs  @relation(fields: [blog_id], references: [blog_id], onDelete: Cascade)
-    blog_id String
-
-    @@unique([user_id, blog_id])
+    author    users  @relation(fields: [author_id], references: [user_id], onDelete: Cascade)
+    author_id String
 }
 
 // --------------------------------------------- //
@@ -191,8 +165,6 @@ model users {
     story_comments story_comments[]
     story_ratings  ratings[]
     blogs          blogs[]
-    blog_likes     blog_likes[]
-    blog_comments  blog_comments[]
 }
 
 enum UserRole {
