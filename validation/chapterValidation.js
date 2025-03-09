@@ -28,10 +28,6 @@ export const updaterChapterValidator = Joi.object({
     "string.min": "Chapter title must be at least 2 characters",
     "string.max": "Chapter title must not be over 255 characters",
   }),
-  chapter_number: Joi.number().min(0).messages({
-    "any.required": "Chapter number is required",
-    "number.min": "Chapter number must be greater than or equal to 0",
-  }),
   content: Joi.string().min(2).messages({
     "any.required": "Chapter content is required",
     "string.empty": "Chapter content must not be empty",
@@ -39,5 +35,4 @@ export const updaterChapterValidator = Joi.object({
     "string.max": "Chapter content must not be over 255 characters",
   }),
   status: Joi.string(),
-  story_id: Joi.string(),
 });

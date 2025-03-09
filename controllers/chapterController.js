@@ -1,5 +1,8 @@
 import { prisma } from "../config/db.js";
-import { createChapterValidator } from "../validation/chapterValidation.js";
+import {
+  createChapterValidator,
+  updaterChapterValidator,
+} from "../validation/chapterValidation.js";
 import { updateStoryValidator } from "../validation/storyValidation.js";
 
 export const getAllChapters = async (req, res) => {
@@ -97,7 +100,7 @@ export const updateChapter = async (req, res) => {
   const data = req.body;
 
   try {
-    await updateStoryValidator.validateAsync(data);
+    await updaterChapterValidator.validateAsync(data);
 
     const updatedChapter = await prisma.chapters.update({
       where: { chapter_id },
