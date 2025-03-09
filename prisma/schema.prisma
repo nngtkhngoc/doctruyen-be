@@ -21,9 +21,8 @@ model stories {
     progress     Progress @default(ON_GOING)
     published_at DateTime @default(now())
 
-    like_counts    Int   @default(0)
-    comment_counts Int   @default(0)
-    rating_avg     Float @default(0)
+    like_counts Int   @default(0)
+    rating_avg  Float @default(0)
 
     story_chapters chapters[]
     story_ratings  ratings[]

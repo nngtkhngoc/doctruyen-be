@@ -13,7 +13,6 @@ export const getAllStories = async (req, res) => {
       ![
         "title",
         "like_counts",
-        "comment_counts",
         "rating_avg",
         "published_at",
         "price",

@@ -3,7 +3,7 @@ import { verifyToken } from "../middleware/verifyToken.js";
 import { verifyAdmin } from "../middleware/verifyAdmin.js";
 import {
   getAllStories,
-  getStory,
+  getStory, 
   createStory,
   deleteStory,
   updateStory,
