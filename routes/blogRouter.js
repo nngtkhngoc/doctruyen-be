@@ -7,13 +7,14 @@ import {
   getBlog,
 } from "../controllers/blogController.js";
 import { verifyToken } from "../middleware/verifyToken.js";
+import { checkUserBanStatus } from "../middleware/checkUserBanStatus.js";
 
 const router = express.Router();
 
 router.get("/get-all", getAllBlogs);
 router.get("/get-details/:blog_id", getBlog);
 router.get("/get-all-for-user", verifyToken, getAllBlogsForUser);
-router.post("/create", verifyToken, createBlog);
+router.post("/create", verifyToken, checkUserBanStatus, createBlog);
 router.post("/delete/:blog_id", verifyToken, deleteBlog);
 
 export default router;
