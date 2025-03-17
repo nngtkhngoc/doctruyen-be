@@ -255,10 +255,10 @@ export const signIn = async (req, res) => {
 export const signOut = async (req, res) => {
   try {
     res.cookie("jwt", "", {
-      httpOnly: true, 
-      secure: true, 
-      sameSite: "None", 
-      expires: new Date(0), 
+      httpOnly: true,
+      secure: true,
+      sameSite: "None",
+      expires: new Date(0),
     });
 
     return res
@@ -329,9 +329,13 @@ export const getVerificationToken = async (req, res) => {
 
         await sendVerificationEmail(user.email, verification_token);
 
-        return res.status(200).json({ message: "Send Token successfully" });
+        return res
+          .status(200)
+          .json({ success: "true", message: "Send Token successfully" });
       } else {
-        return res.status(400).json({ message: "User has already verified" });
+        return res
+          .status(400)
+          .json({ success: "false", message: "User has already verified" });
       }
     }
 
