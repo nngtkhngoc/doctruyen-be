@@ -6,6 +6,7 @@ dotenv.config();
 
 export const verifyToken = async (req, res, next) => {
   const token = req.cookies.jwt;
+
   if (!token) return res.status(401).send("Access Denied");
 
   try {
