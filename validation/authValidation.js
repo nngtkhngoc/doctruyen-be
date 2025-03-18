@@ -53,6 +53,7 @@ export const signUpValidator = Joi.object({
       "any.only": "Password is not match",
     }),
   role: Joi.string(),
+  profile_pic: Joi.string(),
 });
 
 export const resetPasswordValidator = Joi.object({
