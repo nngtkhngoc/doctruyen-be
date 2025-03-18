@@ -177,6 +177,7 @@ export const signUp = async (req, res) => {
         email: data.email,
         password: hashedPassword,
         role: data.role ? data.role : "USER",
+        profile_pic: data.profile_pic,
       },
     });
 
