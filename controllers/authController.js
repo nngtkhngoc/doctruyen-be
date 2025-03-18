@@ -401,7 +401,7 @@ export const getResetPasswordToken = async (req, res) => {
       where: { email },
       data: {
         reset_password_token: reset_password_token,
-        reset_password_token_expires_at: new Date(Date.now() + 5 * 60 * 1000),
+        reset_password_token_expires_at: new Date(Date.now() + 10 * 60 * 1000),
       },
     });
 

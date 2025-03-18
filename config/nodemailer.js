@@ -52,7 +52,7 @@ export const sendResetPasswordEmail = async (client, resetPasswordToken) => {
   </div>
 
   <div>Enter this code on the password reset page to set up a new password. 
-    Please remember that this password reset link will expire in 5 minutes.
+    Please remember that this password reset link will expire in 10 minutes.
   </div>
 
   <div>If you did not request this, please ignore this email. Your password will remain unchanged.</div>
