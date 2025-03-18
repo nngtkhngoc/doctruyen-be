@@ -331,15 +331,15 @@ export const getVerificationToken = async (req, res) => {
 
         return res
           .status(200)
-          .json({ success: "true", message: "Send Token successfully" });
+          .json({ success: true, message: "Send Token successfully" });
       } else {
         return res
           .status(400)
-          .json({ success: "false", message: "User has already verified" });
+          .json({ success: false, message: "User has already verified" });
       }
     }
 
-    return res.status(404).json({ message: "User not found" });
+    return res.status(404).json({ success: false, message: "User not found" });
   } catch (error) {
     console.log("Error send token", error);
     return res
@@ -350,12 +350,14 @@ export const getVerificationToken = async (req, res) => {
 
 export const verifyEmail = async (req, res) => {
   const { verification_token } = req.body;
+  const { user_id } = req;
 
   try {
     const user = await prisma.users.findUnique({
       where: {
         verification_token,
         verification_token_expires_at: { gt: new Date() },
+        user_id,
       },
     });
 
