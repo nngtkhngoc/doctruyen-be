@@ -242,6 +242,7 @@ export const signIn = async (req, res) => {
         email: user.email,
         phone_number: user.phone_number,
         profile_pic: user.profile_pic,
+        is_verified: user.is_verified,
       },
     });
   } catch (error) {
