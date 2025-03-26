@@ -2,18 +2,12 @@ import authRouter from "./authRouter.js";
 import genreRouter from "./genreRouter.js";
 import storyRouter from "./storyRouter.js";
 import chapterRouter from "./chapterRouter.js";
-import likeStoryRouter from "./likeStoryRouter.js";
-import commentStoryRouter from "./commentStoryRouter.js";
-import rateStoryRouter from "./rateStoryRouter.js";
 import blogRouter from "./blogRouter.js";
 
 export const routes = (app) => {
   app.use("/api/auth", authRouter);
-  app.use("/api/genre", genreRouter);
-  app.use("/api/story", storyRouter);
-  app.use("/api/chapter", chapterRouter);
-  app.use("/api/like_story", likeStoryRouter);
-  app.use("/api/comment_story", commentStoryRouter);
-  app.use("/api/rate_story", rateStoryRouter);
-  app.use("/api/blog", blogRouter);
+  app.use("/api/genres", genreRouter);
+  app.use("/api/stories", storyRouter);
+  app.use("/api/chapters", chapterRouter);
+  app.use("/api/blogs", blogRouter);
 };

@@ -34,33 +34,7 @@ export const getAllBlogs = async (req, res) => {
 
     return res.status(200).json({ success: true, data: blogs });
   } catch (error) {
-    console.log("Error get all stories", error);
-    return res
-      .status(500)
-      .json({ success: false, message: "Internal Server Error" });
-  }
-};
-
-export const getAllBlogsForUser = async (req, res) => {
-  const author_id = req.user_id;
-  let { limit, page } = req.query;
-
-  try {
-    const pageSize = parseInt(limit);
-    const currentPage = parseInt(page) || 1;
-
-    const blogs = await prisma.blogs.findMany({
-      where: { author_id },
-      ...(pageSize > 0
-        ? { take: pageSize, skip: (currentPage - 1) * pageSize }
-        : {}),
-      orderBy: { created_at: "desc" },
-      omit: { author_id: true },
-    });
-
-    return res.status(200).json({ success: true, data: blogs });
-  } catch (error) {
-    console.log("Error get all stories for users", error);
+    console.log("Error get all blogs", error);
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });

@@ -96,24 +96,10 @@ export const getUser = async (req, res) => {
       },
       where: { user_id },
       include: {
-        story_likes: {
-          select: { story: { select: { title: true } }, liked_at: true },
-        },
-        story_comments: {
-          select: {
-            story: { select: { title: true } },
-            commented_at: true,
-            comment_id: true,
-            content: true,
-          },
-        },
-        story_ratings: {
-          select: {
-            story: { select: { title: true } },
-            rated_at: true,
-            score: true,
-          },
-        },
+        story_likes: true,
+        story_comments: true,
+        story_ratings: true,
+        blogs: true,
       },
     });
 

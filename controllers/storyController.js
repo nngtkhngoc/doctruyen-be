@@ -6,7 +6,15 @@ import {
 import cloudinary from "../config/cloudinary.js";
 
 export const getAllStories = async (req, res) => {
-  let { limit, page, sort = "title", order = "desc", filter_value } = req.query;
+  let {
+    limit,
+    page,
+    sort = "title",
+    order = "desc",
+    genres,
+    authors,
+    title,
+  } = req.query;
 
   try {
     if (
@@ -25,50 +33,54 @@ export const getAllStories = async (req, res) => {
         .json({ success: false, message: "Invalid order field" });
     }
 
-    const pageSize = parseInt(limit);
+    const pageSize = parseInt(limit) || 10;
     const currentPage = parseInt(page) || 1;
 
     let whereCondition = {};
-    if (filter_value) {
+
+    if (genres) {
+      const genreList = genres.split(",").map((g) => g.trim());
+      whereCondition.story_genres = {
+        some: {
+          genre: {
+            name: { in: genreList, mode: "insensitive" },
+          },
+        },
+      };
+    }
+
+    if (authors) {
+      const authorList = authors.split(",").map((a) => a.trim());
+      whereCondition.OR = authorList.map((author) => ({
+        author_name: { contains: author, mode: "insensitive" },
+      }));
+    }
+
+    if (title) {
       whereCondition = {
-        OR: [
-          { title: { contains: filter_value, mode: "insensitive" } },
-          { author_name: { contains: filter_value, mode: "insensitive" } },
-        ],
+        title: { contains: title, mode: "insensitive" },
       };
     }
 
     const stories = await prisma.stories.findMany({
       where: whereCondition,
-      ...(pageSize > 0
-        ? { take: pageSize, skip: (currentPage - 1) * pageSize }
-        : {}),
+      take: pageSize,
+      skip: (currentPage - 1) * pageSize,
       orderBy: { [sort]: order },
       include: {
         story_genres: {
           select: {
-            genre: { select: { name: true } },
+            genre: true,
           },
         },
-        story_comments: {
-          select: {
-            user: { select: { username: true } },
-            comment_id: true,
-            commented_at: true,
-            content: true,
-          },
-        },
+        story_comments: { orderBy: { commented_at: "desc" } },
+        story_chapters: { orderBy: { chapter_number: "asc" } },
       },
     });
 
-    const formattedStories = stories.map((story) => ({
-      ...story,
-      story_genres: story.story_genres.map((g) => g.genre.name),
-    }));
-
-    return res.status(200).json({ success: true, data: formattedStories });
+    return res.status(200).json({ success: true, data: stories });
   } catch (error) {
-    console.error("Error get all stories", error);
+    console.error("Error getting stories:", error);
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
@@ -83,26 +95,16 @@ export const getStory = async (req, res) => {
       include: {
         story_genres: {
           select: {
-            genre: { select: { name: true } },
+            genre: true,
           },
         },
-        story_comments: {
-          select: {
-            user: { select: { username: true } },
-            comment_id: true,
-            commented_at: true,
-            content: true,
-          },
-        },
+        story_comments: { orderBy: { commented_at: "desc" } },
+        story_chapters: { orderBy: { chapter_number: "asc" } },
       },
     });
 
     if (story) {
-      const formattedStory = {
-        ...story,
-        story_genres: story.story_genres.map((g) => g.genre.name),
-      };
-      return res.status(200).json({ success: true, data: formattedStory });
+      return res.status(200).json({ success: true, data: story });
     }
 
     return res.status(404).json({ success: false, message: "Story not found" });
@@ -247,6 +249,148 @@ export const deleteStory = async (req, res) => {
       .status(200)
       .json({ success: true, message: "Delete story successfully" });
   } catch (error) {
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const likeStory = async (req, res, next) => {
+  const { action, story_id } = req.params;
+  const user_id = req.user_id;
+
+  try {
+    const checkLike = await prisma.story_likes.findUnique({
+      where: { user_id_story_id: { user_id, story_id } },
+    });
+
+    if (checkLike) {
+      await prisma.story_likes.delete({
+        where: { user_id_story_id: { user_id, story_id } },
+      });
+    } else {
+      await prisma.story_likes.create({ data: { user_id, story_id } });
+    }
+
+    req.story_id = story_id;
+    next();
+  } catch (error) {
+    console.log("Error like story", error);
+    console.log(user_id, " ", action, " ", story_id);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const updateLikeCounts = async (req, res) => {
+  const { story_id } = req;
+  try {
+    const count = await prisma.story_likes.count({
+      where: { story_id },
+    });
+
+    await prisma.stories.update({
+      where: { story_id },
+      data: { like_counts: count },
+    });
+
+    return res.status(200).json({ story_id, like_counts: count });
+  } catch (error) {
+    console.log("Error update story likes middleware:", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const commentStory = async (req, res) => {
+  const { user_id } = req;
+  const { content } = req.body;
+  const { story_id } = req.params;
+
+  try {
+    const createdComment = await prisma.story_comments.create({
+      data: { user_id, story_id, content },
+    });
+    return res.status(200).json({ success: true, data: createdComment });
+  } catch (error) {
+    console.log("Error creating comment: ", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const deleteStoryComment = async (req, res) => {
+  const { comment_id } = req.params;
+  try {
+    await prisma.story_comments.delete({ where: { comment_id } });
+
+    return res
+      .status(200)
+      .json({ success: true, message: "Delete comment successfully" });
+  } catch (error) {
+    console.log("Error deleting comment: ", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const rateStory = async (req, res, next) => {
+  const { user_id } = req;
+  const { story_id } = req.params;
+  const { score } = req.body;
+
+  try {
+    if (score < 1 || score > 5) {
+      return res.status(400).json({ success: false });
+    }
+
+    const existRating = await prisma.ratings.findUnique({
+      where: { user_id_story_id: { user_id, story_id } },
+    });
+
+    if (existRating) {
+      await prisma.ratings.update({
+        where: { user_id_story_id: { user_id, story_id } },
+        data: { score },
+      });
+    } else {
+      await prisma.ratings.create({
+        data: { user_id, story_id, score },
+      });
+    }
+
+    req.story_id = story_id;
+
+    next();
+  } catch (error) {
+    console.log("Error rating story: ", error);
+    return res
+      .status(500)
+      .json({ success: false, mesasge: "Internal Server Error" });
+  }
+};
+
+export const updateStoryRating = async (req, res) => {
+  const { story_id } = req;
+  try {
+    const ratingResult = await prisma.ratings.aggregate({
+      where: { story_id },
+      _avg: { score: true },
+    });
+
+    const rating_avg = ratingResult._avg?.score || 0;
+    await prisma.stories.update({
+      where: { story_id },
+      data: { rating_avg },
+    });
+
+    return res.status(200).json({ story_id, rating_avg: ratingResult });
+  } catch (error) {
+    console.log("Error update story avg ratings middleware:", error);
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });

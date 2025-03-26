@@ -3,18 +3,39 @@ import { verifyToken } from "../middleware/verifyToken.js";
 import { verifyAdmin } from "../middleware/verifyAdmin.js";
 import {
   getAllStories,
-  getStory, 
+  getStory,
   createStory,
   deleteStory,
   updateStory,
+  likeStory,
+  updateLikeCounts,
+  commentStory,
+  deleteStoryComment,
+  rateStory,
+  updateStoryRating,
 } from "../controllers/storyController.js";
+import { checkUserBanStatus } from "../middleware/checkUserBanStatus.js";
 
 const router = express.Router();
 
-router.get("/get-all", getAllStories);
-router.get("/get-details/:story_id", getStory);
-router.post("/create", verifyToken, verifyAdmin, createStory);
-router.post("/delete/:story_id", verifyToken, verifyAdmin, deleteStory);
-router.put("/update/:story_id", verifyToken, verifyAdmin, updateStory);
+router.get("/", getAllStories);
+router.get("/:story_id", getStory);
+router.post("/", verifyToken, verifyAdmin, createStory);
+router.put("/:story_id", verifyToken, verifyAdmin, updateStory);
+router.delete("/:story_id", verifyToken, verifyAdmin, deleteStory);
+
+router.post("/:story_id/like", verifyToken, likeStory, updateLikeCounts);
+router.post(
+  "/:story_id/comment",
+  verifyToken,
+  checkUserBanStatus,
+  commentStory
+);
+router.delete(
+  "/:story_id/comment/:comment_id",
+  verifyToken,
+  deleteStoryComment
+);
+router.post("/:story_id/rate", verifyToken, rateStory, updateStoryRating);
 
 export default router;

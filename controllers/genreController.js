@@ -23,10 +23,8 @@ export const getGenre = async (req, res) => {
           include: {
             story: true,
           },
-          omit: { genre_id, story_id: true },
         },
       },
-      omit: { genre_id: true },
     });
 
     if (genre) {
