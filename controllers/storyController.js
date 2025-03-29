@@ -78,7 +78,9 @@ export const getAllStories = async (req, res) => {
       },
     });
 
-    return res.status(200).json({ success: true, data: stories });
+    const total = await prisma.stories.count({ where: whereCondition });
+
+    return res.status(200).json({ success: true, data: stories, total: total });
   } catch (error) {
     console.error("Error getting stories:", error);
     return res
