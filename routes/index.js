@@ -4,6 +4,7 @@ import storyRouter from "./storyRouter.js";
 import chapterRouter from "./chapterRouter.js";
 import blogRouter from "./blogRouter.js";
 import chatbotRouter from "./chatbotRouter.js";
+
 export const routes = (app) => {
   app.use("/api/auth", authRouter);
   app.use("/api/genres", genreRouter);
