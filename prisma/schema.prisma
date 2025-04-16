@@ -149,6 +149,7 @@ model users {
     role         UserRole @default(USER)
     fullname     String?
     profile_pic  String?
+    thread_id String?
     created_at   DateTime @default(now())
     is_verified  Boolean  @default(false)
     is_banned    Boolean  @default(false)

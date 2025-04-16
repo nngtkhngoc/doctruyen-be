@@ -47,12 +47,12 @@ export const sendResetPasswordEmail = async (client, resetPasswordToken) => {
   <div>Hello,</div>
 
   <div>You recently requested to reset your password. Click 
-    <a href='http://localhost:5000/api/auth/reset-password/${resetPasswordToken}'>here</a> 
+    <a href='http://localhost:5173/reset-password/${resetPasswordToken}'>here</a> 
     to proceed.
   </div>
 
   <div>Enter this code on the password reset page to set up a new password. 
-    Please remember that this password reset link will expire in 5 minutes.
+    Please remember that this password reset link will expire in 10 minutes.
   </div>
 
   <div>If you did not request this, please ignore this email. Your password will remain unchanged.</div>

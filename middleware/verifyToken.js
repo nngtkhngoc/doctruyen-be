@@ -7,7 +7,8 @@ dotenv.config();
 export const verifyToken = async (req, res, next) => {
   const token = req.cookies.jwt;
 
-  if (!token) return res.status(401).send("Access Denied");
+  if (!token)
+    return res.status(401).json({ success: false, message: "Access Denied" });
 
   try {
     const verified = jwt.verify(token, process.env.JWT_SECRET);

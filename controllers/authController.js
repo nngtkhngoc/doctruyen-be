@@ -96,24 +96,10 @@ export const getUser = async (req, res) => {
       },
       where: { user_id },
       include: {
-        story_likes: {
-          select: { story: { select: { title: true } }, liked_at: true },
-        },
-        story_comments: {
-          select: {
-            story: { select: { title: true } },
-            commented_at: true,
-            comment_id: true,
-            content: true,
-          },
-        },
-        story_ratings: {
-          select: {
-            story: { select: { title: true } },
-            rated_at: true,
-            score: true,
-          },
-        },
+        story_likes: true,
+        story_comments: true,
+        story_ratings: true,
+        blogs: true,
       },
     });
 
@@ -177,6 +163,7 @@ export const signUp = async (req, res) => {
         email: data.email,
         password: hashedPassword,
         role: data.role ? data.role : "USER",
+        profile_pic: data.profile_pic,
       },
     });
 
@@ -242,6 +229,7 @@ export const signIn = async (req, res) => {
         email: user.email,
         phone_number: user.phone_number,
         profile_pic: user.profile_pic,
+        is_verified: user.is_verified,
       },
     });
   } catch (error) {
@@ -254,7 +242,12 @@ export const signIn = async (req, res) => {
 
 export const signOut = async (req, res) => {
   try {
-    res.cookie("jwt", "", { maxAge: 0 });
+    res.cookie("jwt", "", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "None",
+      expires: new Date(0),
+    });
 
     return res
       .status(200)
@@ -324,13 +317,17 @@ export const getVerificationToken = async (req, res) => {
 
         await sendVerificationEmail(user.email, verification_token);
 
-        return res.status(200).json({ message: "Send Token successfully" });
+        return res
+          .status(200)
+          .json({ success: true, message: "Send Token successfully" });
       } else {
-        return res.status(400).json({ message: "User has already verified" });
+        return res
+          .status(400)
+          .json({ success: false, message: "User has already verified" });
       }
     }
 
-    return res.status(404).json({ message: "User not found" });
+    return res.status(404).json({ success: false, message: "User not found" });
   } catch (error) {
     console.log("Error send token", error);
     return res
@@ -341,12 +338,14 @@ export const getVerificationToken = async (req, res) => {
 
 export const verifyEmail = async (req, res) => {
   const { verification_token } = req.body;
+  const { user_id } = req;
 
   try {
     const user = await prisma.users.findUnique({
       where: {
         verification_token,
         verification_token_expires_at: { gt: new Date() },
+        user_id,
       },
     });
 
@@ -390,7 +389,7 @@ export const getResetPasswordToken = async (req, res) => {
       where: { email },
       data: {
         reset_password_token: reset_password_token,
-        reset_password_token_expires_at: new Date(Date.now() + 5 * 60 * 1000),
+        reset_password_token_expires_at: new Date(Date.now() + 10 * 60 * 1000),
       },
     });
 

@@ -2,7 +2,7 @@ import {
   createGenre,
   deleteGenre,
   getAllGenres,
-  getGenre, 
+  getGenre,
 } from "../controllers/genreController.js";
 
 import express from "express";
@@ -11,9 +11,9 @@ import { verifyAdmin } from "../middleware/verifyAdmin.js";
 
 const router = express.Router();
 
-router.get("/get-all", getAllGenres);
-router.get("/get-details/:genre_id", getGenre);
-router.post("/create", verifyToken, verifyAdmin, createGenre);
-router.post("/delete/:genre_id", verifyToken, verifyAdmin, deleteGenre);
+router.get("/", getAllGenres);
+router.get("/:genre_id", getGenre);
+router.post("/", verifyToken, verifyAdmin, createGenre);
+router.delete("/:genre_id", verifyToken, verifyAdmin, deleteGenre);
 
 export default router;

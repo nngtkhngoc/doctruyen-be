@@ -53,6 +53,7 @@ export const signUpValidator = Joi.object({
       "any.only": "Password is not match",
     }),
   role: Joi.string(),
+  profile_pic: Joi.string(),
 });
 
 export const resetPasswordValidator = Joi.object({
@@ -109,8 +110,8 @@ export const updateUserValidator = Joi.object({
     .pattern(/^[A-Za-zÀ-Ỹà-ỹ\s]+$/)
     .min(6)
     .max(255)
+    .allow("")
     .messages({
-      "string.empty": "Fullname must no be empty",
       "string.pattern.base": "Fullname is unvalid",
       "string.min": "Fullname must be at least 6 characters",
       "string.max": "Fullname must not be over 255 characters",

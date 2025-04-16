@@ -5,37 +5,6 @@ import {
 } from "../validation/chapterValidation.js";
 import { updateStoryValidator } from "../validation/storyValidation.js";
 
-export const getAllChapters = async (req, res) => {
-  let { limit, page } = req.query;
-  const { story_id } = req.params;
-
-  try {
-    const pageSize = parseInt(limit);
-    const currentPage = parseInt(page) || 1;
-
-    const chapters = await prisma.chapters.findMany({
-      where: { story_id },
-      ...(pageSize > 0
-        ? { take: pageSize, skip: (currentPage - 1) * pageSize }
-        : {}),
-      orderBy: { chapter_number: "desc" },
-    });
-
-    if (chapters) {
-      return res.status(200).json({ success: true, data: chapters });
-    }
-
-    return res
-      .status(404)
-      .json({ success: false, message: "Chapters not found" });
-  } catch (error) {
-    console.log("Error get all chapters", error);
-    return res
-      .status(500)
-      .json({ success: false, message: "Internal Server Error" });
-  }
-};
-
 export const getChapter = async (req, res) => {
   const { chapter_id } = req.params;
   try {
