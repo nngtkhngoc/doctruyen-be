@@ -154,7 +154,6 @@ export const signUp = async (req, res) => {
         .status(409)
         .json({ success: false, message: "Phone number already exists" });
     }
-
     const hashedPassword = await bcrypt.hash(data.password, 10);
 
     const newUser = await prisma.users.create({
@@ -181,9 +180,7 @@ export const signUp = async (req, res) => {
       });
     }
     console.log("Error signing up: ", error);
-    return res
-      .status(500)
-      .json({ success: false, message: "Internal Server Error" });
+    return res.status(500).json({ success: false, message: error.toString() });
   }
 };
 
