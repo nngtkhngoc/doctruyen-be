@@ -119,6 +119,7 @@ export const getUser = async (req, res) => {
 export const signUp = async (req, res) => {
   const data = req.body;
 
+  console.log(data);
   try {
     if (!req.body || Object.keys(req.body).length === 0) {
       return res
