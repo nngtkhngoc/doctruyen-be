@@ -54,7 +54,7 @@ export const updateStoryValidator = Joi.object({
   description: Joi.string().min(4).max(2000).messages({
     "string.empty": "Story description must not be empty",
     "string.min": "Story description must be at least 4 characters",
-    "string.max": "Story description must not be over 1000 characters",
+    "string.max": "Story description must not be over 2000 characters",
   }),
   cover_image: Joi.string(),
   price: Joi.number().min(0).messages({
