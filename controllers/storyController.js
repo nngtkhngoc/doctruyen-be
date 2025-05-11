@@ -4,7 +4,8 @@ import {
   updateStoryValidator,
 } from "../validation/storyValidation.js";
 import cloudinary from "../config/cloudinary.js";
-
+import { getDataFromExcelData } from "../utils/getDataFromExcel.js";
+import storyService from "../services/storyService.js";
 export const getAllStories = async (req, res) => {
   let {
     limit,
@@ -396,5 +397,45 @@ export const updateStoryRating = async (req, res) => {
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const importExcel = async (req, res) => {
+  const data = getDataFromExcelData(req.file.buffer);
+  const headers = data[0];
+  data.shift();
+  try {
+    const stories =
+      (await Promise.all(
+        data.map(async (row) => {
+          let story = {};
+
+          for (let i = 0; i < headers.length; i++) {
+            if (headers[i] === "genres") {
+              story[headers[i]] = row[i].split(",");
+              continue;
+            }
+            story[headers[i]] = row[i];
+          }
+          try {
+            return await storyService.createStory(story);
+          } catch (error) {
+            console.log("Error creating story from excel: ", error);
+
+            return null;
+          }
+        })
+      )) ?? [];
+    return res.status(200).json({
+      success: true,
+      message: "Import stories successfully",
+      data: stories,
+    });
+  } catch (error) {
+    // console.log("stories", stories);
+    return res.status(500).json({
+      success: false,
+      message: error.toString(),
+    });
   }
 };

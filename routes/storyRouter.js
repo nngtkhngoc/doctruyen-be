@@ -1,6 +1,7 @@
 import express from "express";
 import { verifyToken } from "../middleware/verifyToken.js";
 import { verifyAdmin } from "../middleware/verifyAdmin.js";
+import { upload } from "../middleware/multer.js";
 import {
   getAllStories,
   getStory,
@@ -13,6 +14,7 @@ import {
   deleteStoryComment,
   rateStory,
   updateStoryRating,
+  importExcel,
 } from "../controllers/storyController.js";
 import { checkUserBanStatus } from "../middleware/checkUserBanStatus.js";
 
@@ -37,5 +39,5 @@ router.delete(
   deleteStoryComment
 );
 router.post("/:story_id/rate", verifyToken, rateStory, updateStoryRating);
-
+router.post("/import-excel", upload.single("file"), importExcel);
 export default router;
