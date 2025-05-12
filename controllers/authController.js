@@ -116,6 +116,35 @@ export const getUser = async (req, res) => {
   }
 };
 
+export const getUserById = async (req, res) => {
+  const user_id = req.params.id;
+  try {
+    const user = await prisma.users.findUnique({
+      omit: {
+        password: true,
+      },
+      where: { user_id },
+      include: {
+        story_likes: true,
+        story_comments: true,
+        story_ratings: true,
+        blogs: true,
+      },
+    });
+
+    if (user) {
+      return res.status(200).json({ success: true, data: user });
+    }
+
+    return res.status(404).json({ success: false, message: "User not found" });
+  } catch (error) {
+    console.log("Error get user: ", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
 export const signUp = async (req, res) => {
   const data = req.body;
 
@@ -176,7 +205,7 @@ export const signUp = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map((err) => err.message),
+        message: error.details.map(err => err.message),
       });
     }
     console.log("Error signing up: ", error);
@@ -263,6 +292,7 @@ export const signOut = async (req, res) => {
 export const updateUser = async (req, res) => {
   const data = req.body;
   const user_id = req.user_id;
+  console.log(user_id);
   try {
     await updateUserValidator.validateAsync(data);
 
@@ -270,8 +300,11 @@ export const updateUser = async (req, res) => {
       const uploadRes = await cloudinary.uploader.upload(data.profile_pic);
       data.profile_pic = uploadRes.secure_url;
     }
-
-    const updatedUser = await prisma.users.update({ where: { user_id }, data });
+    console.log(data);
+    const updatedUser = await prisma.users.update({
+      where: { user_id },
+      data,
+    });
 
     if (!updatedUser) {
       return res
@@ -288,7 +321,7 @@ export const updateUser = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map((err) => err.message),
+        message: error.details.map(err => err.message),
       });
     }
     console.log("Error update user: ", error);
@@ -441,7 +474,7 @@ export const resetPassword = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map((err) => err.message),
+        message: error.details.map(err => err.message),
       });
     }
     console.log("Error reset password: ", error);
