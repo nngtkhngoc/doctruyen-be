@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "./server.js",
   "scripts": {
-    "start": "npx prisma generate && node --watch server.js",
+    "start": "node --watch server.js",
     "build": "npm install",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "gen": "npx prisma generate"
   },
   "keywords": [],
   "author": "",
