@@ -13,7 +13,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
-          ssh-key-scan -H sitedoctruyen.id.vn > ~/.ssh/known_hosts
+          ssh-keyscan -H sitedoctruyen.id.vn > ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
       - name: Stop app
         run: |
@@ -22,7 +22,7 @@ jobs:
           EOF
       - name: Copy and deploy in remote server
         run: |
-          scp -i ~/.ssh/id_rsa -r "$PWD" sitedoctruyen.id.vn:~/doctruyen/be
+          scp -i ~/.ssh/id_rsa -r . sitedoctruyen.id.vn:~/doctruyen/be
           ssh -i ~/.ssh/id_rsa sitedoctruyen.id.vn << 'EOF'
           cd ~/doctruyen/be
           npm install
