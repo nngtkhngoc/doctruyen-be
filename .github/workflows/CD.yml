@@ -1,9 +1,5 @@
 name: Staging CD workflow
 on:
-  workflow_run:
-    workflows: ["Staging CI workflow"]
-    types:
-      - completed
   push:
     branches:
       - staging
