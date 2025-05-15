@@ -17,7 +17,7 @@ jobs:
           chmod 644 ~/.ssh/known_hosts
       - name: Stop app
         run: |
-          ssh -i ~/.ssh/id_rsa sitedoctruyen.id.vn << 'EOF'
+          ssh -i ~/.ssh/id_rsa triuq@sitedoctruyen.id.vn << 'EOF'
           pm2 stop doctruyen-be
           EOF
       - name: Copy and deploy in remote server
