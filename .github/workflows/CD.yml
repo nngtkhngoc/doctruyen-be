@@ -25,7 +25,7 @@ jobs:
           EOF
       - name: compress the project
         run: |
-          tar -czf be.tar.gz .
+          tar --exclude='./be.tar.gz' -czf be.tar.gz .
 
       - name: Copy and deploy in remote server
         run: |
