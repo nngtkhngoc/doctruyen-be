@@ -495,6 +495,22 @@ Get details of a specific chapter.
 - `404 Not Found`: Chapter not found
 - `500 Internal Server Error`: Server error
 
+### Get Chapter By Story Id and Chapter Number
+
+**GET** `/chapters/:story_id/:chapter_number`
+
+Get details of a specific chapter of a story.
+
+**Parameters:**
+
+- `story_id`: Story ID
+- `chapter_number` : Chapter number
+  **Response:**
+
+- `200 OK`: Chapter details
+- `404 Not Found`: Chapter not found
+- `500 Internal Server Error`: Server error
+
 ### Create Chapter
 
 **POST** `/chapters`

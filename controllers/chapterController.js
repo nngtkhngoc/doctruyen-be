@@ -95,3 +95,31 @@ export const updateChapter = async (req, res) => {
       .json({ success: false, message: "Internal Server Error" });
   }
 };
+
+export const getChapterByChapterNumber = async (req, res) => {
+  const { story_id, chapter_number } = req.params;
+
+  try {
+    const chapterNumber = parseInt(chapter_number, 10);
+
+    const story = await prisma.stories.findUnique({
+      where: { story_id },
+      select: { story_chapters: true },
+    });
+
+    if (!story) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Story not found" });
+    }
+
+    return res.status(200).json({
+      success: true,
+      data: story.story_chapters[chapterNumber - 1],
+    });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
