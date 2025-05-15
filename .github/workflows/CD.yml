@@ -20,6 +20,7 @@ jobs:
         run: |
           ssh -i ~/.ssh/id_rsa triuq@sitedoctruyen.id.vn << 'EOF'
           pm2 stop doctruyen-be || true
+          pm2 delete doctruyen-be || true
           rm -rf ~/doctruyen/be
           mkdir -p ~/doctruyen/be
           EOF
