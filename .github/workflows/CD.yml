@@ -38,5 +38,5 @@ jobs:
           tar -xzf be.tar.gz
           rm -rf be.tar.gz
           npm install
-          pm2 start server.js --name doctruyen-be
+          /home/triuq/.nvm/versions/node/v20.0.0/bin/pm2 start server.js --name doctruyen-be
           EOF
