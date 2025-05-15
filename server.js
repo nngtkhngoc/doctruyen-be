@@ -19,6 +19,11 @@ app.use(
 );
 app.use(morgan("dev"));
 
+app.get("/test-workflow", (req, res) => {
+  return res.status(200).json({
+    message: "Workflow is working",
+  });
+});
 routes(app);
 app.listen(PORT, () => {
   console.log("Server is listening on port", PORT);
