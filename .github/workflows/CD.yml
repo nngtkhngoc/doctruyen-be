@@ -14,7 +14,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
           ssh-keyscan -H sitedoctruyen.id.vn > ~/.ssh/known_hosts
-          chmod -R 770 ~/.ssh
+          chmod -R 600 ~/.ssh
       - name: Stop app
         run: |
           ssh -i ~/.ssh/id_rsa triuq@sitedoctruyen.id.vn << 'EOF'
