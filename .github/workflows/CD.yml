@@ -1,0 +1,34 @@
+name: Staging CD workflow
+on:
+  workflow_run:
+    workflows: ["Staging CI workflow"]
+    types:
+      - completed
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Copy ssh-key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa"
+          ssh-key-scan -H sitedoctruyen.id.vn > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+      - name: Stop app
+        run: |
+          ssh -i ~/.ssh/id_rsa sitedoctruyen.id.vn << 'EOF'
+          pm2 stop doctruyen-be
+          EOF
+      - name: Copy and deploy in remote server
+        run: |
+          scp -i ~/.ssh/id_rsa -r "$PWD" sitedoctruyen.id.vn:~/doctruyen/be
+          ssh -i ~/.ssh/id_rsa sitedoctruyen.id.vn << 'EOF'
+          cd ~/doctruyen/be
+          npm install
+          pm2 start server.js --name doctruyen-be
+          EOF
