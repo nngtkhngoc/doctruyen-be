@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir /tmp/snapshot
           cp -r . /tmp/snapshot
-          tar -czf be.tar.gz -C /tmp snapshot
+          tar -czf be.tar.gz -C /tmp/snapshot
 
       - name: Copy and deploy in remote server
         run: |
