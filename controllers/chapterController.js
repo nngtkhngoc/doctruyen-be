@@ -95,35 +95,31 @@ export const updateChapter = async (req, res) => {
       .json({ success: false, message: "Internal Server Error" });
   }
 };
-export const importExcel = async (req, res) => {
-  const data = getDataFromExcelData(req.file.buffer);
-  const headers = data[0];
-  // data.shift();
-  console.log(data);
-  // try {
-  //   const chapters =
-  //     (await Promise.all(
-  //       data.map(async (row) => {
-  //         let chapter = {};
-  //         for (let i = 0; i < headers.length; i++) {
-  //           chapter[headers[i]] = row[i];
-  //         }
-  //         try {
-  //           return await storyService.createStory(story);
-  //         } catch (error) {
-  //           return error.toString();
-  //         }
-  //       })
-  //     )) ?? [];
-  //   return res.status(200).json({
-  //     success: true,
-  //     message: "Import chapters successfully",
-  //     data: stories,
-  //   });
-  // } catch (error) {
-  //   return res.status(500).json({
-  //     success: false,
-  //     message: error.toString(),
-  //   });
-  // }
+
+export const getChapterByChapterNumber = async (req, res) => {
+  const { story_id, chapter_number } = req.params;
+
+  try {
+    const chapterNumber = parseInt(chapter_number, 10);
+
+    const story = await prisma.stories.findUnique({
+      where: { story_id },
+      select: { story_chapters: true },
+    });
+
+    if (!story) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Story not found" });
+    }
+
+    return res.status(200).json({
+      success: true,
+      data: story.story_chapters[chapterNumber - 1],
+    });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
 };
