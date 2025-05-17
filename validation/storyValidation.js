@@ -19,11 +19,11 @@ export const createStoryValidator = Joi.object({
       "string.min": "Author name must be at least 4 characters",
       "string.max": "Author name must not be over 255 characters",
     }),
-  description: Joi.string().min(4).max(1000).required().messages({
+  description: Joi.string().min(4).max(2000).required().messages({
     "any.required": "Story description is required",
     "string.empty": "Story description must not be empty",
     "string.min": "Story description must be at least 4 characters",
-    "string.max": "Story description must not be over 1000 characters",
+    "string.max": "Story description must not be over 2000 characters",
   }),
   cover_image: Joi.string(),
   price: Joi.number().min(0).messages({
@@ -51,10 +51,10 @@ export const updateStoryValidator = Joi.object({
       "string.min": "Author name must be at least 4 characters",
       "string.max": "Author name must not be over 255 characters",
     }),
-  description: Joi.string().min(4).max(1000).messages({
+  description: Joi.string().min(4).max(2000).messages({
     "string.empty": "Story description must not be empty",
     "string.min": "Story description must be at least 4 characters",
-    "string.max": "Story description must not be over 1000 characters",
+    "string.max": "Story description must not be over 2000 characters",
   }),
   cover_image: Joi.string(),
   price: Joi.number().min(0).messages({
