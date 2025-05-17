@@ -4,7 +4,7 @@ import {
   updaterChapterValidator,
 } from "../validation/chapterValidation.js";
 import { updateStoryValidator } from "../validation/storyValidation.js";
-
+import { getDataFromExcelData } from "../utils/getDataFromExcel.js";
 export const getChapter = async (req, res) => {
   const { chapter_id } = req.params;
   try {
@@ -94,4 +94,36 @@ export const updateChapter = async (req, res) => {
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
   }
+};
+export const importExcel = async (req, res) => {
+  const data = getDataFromExcelData(req.file.buffer);
+  const headers = data[0];
+  // data.shift();
+  console.log(data);
+  // try {
+  //   const chapters =
+  //     (await Promise.all(
+  //       data.map(async (row) => {
+  //         let chapter = {};
+  //         for (let i = 0; i < headers.length; i++) {
+  //           chapter[headers[i]] = row[i];
+  //         }
+  //         try {
+  //           return await storyService.createStory(story);
+  //         } catch (error) {
+  //           return error.toString();
+  //         }
+  //       })
+  //     )) ?? [];
+  //   return res.status(200).json({
+  //     success: true,
+  //     message: "Import chapters successfully",
+  //     data: stories,
+  //   });
+  // } catch (error) {
+  //   return res.status(500).json({
+  //     success: false,
+  //     message: error.toString(),
+  //   });
+  // }
 };
