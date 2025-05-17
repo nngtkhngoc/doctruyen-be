@@ -100,7 +100,10 @@ export const getStory = async (req, res) => {
             genre: true,
           },
         },
-        story_comments: { orderBy: { commented_at: "desc" } },
+        story_comments: {
+          orderBy: { commented_at: "desc" },
+          include: { user: { select: { username: true } } },
+        },
         story_chapters: { orderBy: { chapter_number: "asc" } },
       },
     });
