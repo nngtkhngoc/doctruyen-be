@@ -5,10 +5,16 @@ import {
 } from "../validation/chapterValidation.js";
 import { updateStoryValidator } from "../validation/storyValidation.js";
 import { getDataFromExcelData } from "../utils/getDataFromExcel.js";
+import path from "path";
+import fs from "fs";
+import { textToSpeech } from "../utils/tts.js";
+const audioPath = path.resolve("..", "audio", "chapters");
 export const getChapter = async (req, res) => {
   const { chapter_id } = req.params;
   try {
-    const chapter = await prisma.chapters.findUnique({ where: { chapter_id } });
+    const chapter = await prisma.chapters.findUnique({
+      where: { chapter_id },
+    });
 
     if (chapter) {
       return res.status(200).json({ success: true, data: chapter });
@@ -93,6 +99,25 @@ export const updateChapter = async (req, res) => {
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
+  }
+};
+export const getAudioChapter = async (req, res) => {
+  const { chapter_id } = req.params;
+  const finalPath = path.join(audioPath, `${chapter_id}.mp3`);
+  if (fs.existsSync(finalPath)) {
+    res.setHeader("Content-Type", "audio/mpeg");
+    return res.sendFile(finalPath);
+  }
+
+  try {
+    const chapter = await prisma.chapters.findUnique({ where: { chapter_id } });
+    await textToSpeech({ text: chapter.content, path: finalPath });
+    return res.sendFile(finalPath);
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.toString(),
+    });
   }
 };
 export const importExcel = async (req, res) => {
