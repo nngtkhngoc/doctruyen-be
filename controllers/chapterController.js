@@ -5,10 +5,16 @@ import {
 } from "../validation/chapterValidation.js";
 import { updateStoryValidator } from "../validation/storyValidation.js";
 import { getDataFromExcelData } from "../utils/getDataFromExcel.js";
+import path from "path";
+import fs from "fs";
+import { textToSpeech } from "../utils/tts.js";
+const audioPath = path.resolve("..", "audio", "chapters");
 export const getChapter = async (req, res) => {
   const { chapter_id } = req.params;
   try {
-    const chapter = await prisma.chapters.findUnique({ where: { chapter_id } });
+    const chapter = await prisma.chapters.findUnique({
+      where: { chapter_id },
+    });
 
     if (chapter) {
       return res.status(200).json({ success: true, data: chapter });
@@ -95,31 +101,54 @@ export const updateChapter = async (req, res) => {
       .json({ success: false, message: "Internal Server Error" });
   }
 };
-
-export const getChapterByChapterNumber = async (req, res) => {
-  const { story_id, chapter_number } = req.params;
+export const getAudioChapter = async (req, res) => {
+  const { chapter_id } = req.params;
+  const finalPath = path.join(audioPath, `${chapter_id}.mp3`);
+  if (fs.existsSync(finalPath)) {
+    res.setHeader("Content-Type", "audio/mpeg");
+    return res.sendFile(finalPath);
+  }
 
   try {
-    const chapterNumber = parseInt(chapter_number, 10);
-
-    const story = await prisma.stories.findUnique({
-      where: { story_id },
-      select: { story_chapters: true },
-    });
-
-    if (!story) {
-      return res
-        .status(404)
-        .json({ success: false, message: "Story not found" });
-    }
-
-    return res.status(200).json({
-      success: true,
-      data: story.story_chapters[chapterNumber - 1],
-    });
+    const chapter = await prisma.chapters.findUnique({ where: { chapter_id } });
+    await textToSpeech({ text: chapter.content, path: finalPath });
+    return res.sendFile(finalPath);
   } catch (error) {
-    return res
-      .status(500)
-      .json({ success: false, message: "Internal Server Error" });
+    return res.status(500).json({
+      success: false,
+      message: error.toString(),
+    });
   }
+};
+export const importExcel = async (req, res) => {
+  const data = getDataFromExcelData(req.file.buffer);
+  const headers = data[0];
+  // data.shift();
+  console.log(data);
+  // try {
+  //   const chapters =
+  //     (await Promise.all(
+  //       data.map(async (row) => {
+  //         let chapter = {};
+  //         for (let i = 0; i < headers.length; i++) {
+  //           chapter[headers[i]] = row[i];
+  //         }
+  //         try {
+  //           return await storyService.createStory(story);
+  //         } catch (error) {
+  //           return error.toString();
+  //         }
+  //       })
+  //     )) ?? [];
+  //   return res.status(200).json({
+  //     success: true,
+  //     message: "Import chapters successfully",
+  //     data: stories,
+  //   });
+  // } catch (error) {
+  //   return res.status(500).json({
+  //     success: false,
+  //     message: error.toString(),
+  //   });
+  // }
 };
