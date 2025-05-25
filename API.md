@@ -288,6 +288,46 @@ Get details of a specific story.
 - `404 Not Found`: Story not found
 - `500 Internal Server Error`: Server error
 
+### Get Similar Stories
+
+**GET** `/stories/:story_id/similar`
+
+Get a list of similar stories based on genres.
+
+**Parameters:**
+
+- `story_id`: Story ID
+
+**Response:**
+
+- `200 OK`: List of similar stories (up to 4 stories)
+- `404 Not Found`: Story not found
+- `500 Internal Server Error`: Server error
+
+**Response Body:**
+
+```json
+{
+  "success": true,
+  "data": [
+    {
+      "story_id": "string",
+      "title": "string",
+      "author_name": "string",
+      "cover_image": "string",
+      "story_genres": [
+        {
+          "genre": {
+            "genre_id": "string",
+            "name": "string"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
 ### Create Story
 
 **POST** `/stories`

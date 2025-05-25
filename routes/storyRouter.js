@@ -15,6 +15,7 @@ import {
   rateStory,
   updateStoryRating,
   importExcel,
+  getSimilarStories,
 } from "../controllers/storyController.js";
 import { checkUserBanStatus } from "../middleware/checkUserBanStatus.js";
 
@@ -40,4 +41,5 @@ router.delete(
 );
 router.post("/:story_id/rate", verifyToken, rateStory, updateStoryRating);
 router.post("/import-excel", upload.single("file"), importExcel);
+router.get("/:story_id/similar", getSimilarStories);
 export default router;

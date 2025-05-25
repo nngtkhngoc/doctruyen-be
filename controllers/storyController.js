@@ -442,3 +442,62 @@ export const importExcel = async (req, res) => {
     });
   }
 };
+
+export const getSimilarStories = async (req, res) => {
+  const { story_id } = req.params;
+  try {
+    // Get the current story's genres
+    const currentStory = await prisma.stories.findUnique({
+      where: { story_id },
+      include: {
+        story_genres: {
+          select: {
+            genre: {
+              select: {
+                genre_id: true,
+              },
+            },
+          },
+        },
+      },
+    });
+
+    if (!currentStory) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Story not found" });
+    }
+
+    const genreIds = currentStory.story_genres.map((sg) => sg.genre.genre_id);
+
+    // Find stories with similar genres, excluding the current story
+    const similarStories = await prisma.stories.findMany({
+      where: {
+        story_id: { not: story_id },
+        story_genres: {
+          some: {
+            genre_id: { in: genreIds },
+          },
+        },
+      },
+      include: {
+        story_genres: {
+          select: {
+            genre: true,
+          },
+        },
+      },
+      take: 4,
+      orderBy: {
+        rating_avg: "desc",
+      },
+    });
+
+    return res.status(200).json({ success: true, data: similarStories });
+  } catch (error) {
+    console.error("Error getting similar stories:", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
