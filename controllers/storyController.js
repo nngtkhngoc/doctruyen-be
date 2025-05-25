@@ -446,7 +446,6 @@ export const importExcel = async (req, res) => {
 export const getSimilarStories = async (req, res) => {
   const { story_id } = req.params;
   try {
-    // Get the current story's genres
     const currentStory = await prisma.stories.findUnique({
       where: { story_id },
       include: {
@@ -487,7 +486,7 @@ export const getSimilarStories = async (req, res) => {
           },
         },
       },
-      take: 4,
+      take: 6,
       orderBy: {
         rating_avg: "desc",
       },
