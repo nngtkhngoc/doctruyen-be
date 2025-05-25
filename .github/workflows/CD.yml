@@ -23,8 +23,6 @@ jobs:
           rm -rf ~/doctruyen/be
           mkdir -p ~/doctruyen/be
           EOF
-      - name: Install dependencies
-        run: npm ci
       - name: compress the project
         run: |
           mkdir /tmp/snapshot
