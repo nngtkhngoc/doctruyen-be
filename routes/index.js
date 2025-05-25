@@ -3,6 +3,7 @@ import genreRouter from "./genreRouter.js";
 import storyRouter from "./storyRouter.js";
 import chapterRouter from "./chapterRouter.js";
 import blogRouter from "./blogRouter.js";
+import chatbotRouter from "./chatbotRouter.js";
 
 export const routes = (app) => {
   app.use("/api/auth", authRouter);
@@ -10,4 +11,5 @@ export const routes = (app) => {
   app.use("/api/stories", storyRouter);
   app.use("/api/chapters", chapterRouter);
   app.use("/api/blogs", blogRouter);
+  app.use("/api/chatbot", chatbotRouter);
 };
