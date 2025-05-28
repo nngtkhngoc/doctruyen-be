@@ -10,6 +10,7 @@ import {
   resetPassword,
   updateUser,
   banUser,
+  getUserById,
 } from "../controllers/authController.js";
 import { verifyToken } from "../middleware/verifyToken.js";
 import { verifyAdmin } from "../middleware/verifyAdmin.js";
@@ -18,6 +19,7 @@ import express from "express";
 const router = express.Router();
 
 router.get("/me", verifyToken, getUser);
+router.get("/:id", verifyToken, verifyAdmin, getUserById);
 router.get("/", verifyToken, verifyAdmin, getAllUsers);
 router.post("/sign-up", signUp);
 router.post("/sign-in", signIn);
