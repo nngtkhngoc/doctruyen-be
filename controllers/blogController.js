@@ -79,7 +79,7 @@ export const createBlog = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map((err) => err.message),
+        message: error.details.map(err => err.message),
       });
     }
 
@@ -87,6 +87,31 @@ export const createBlog = async (req, res) => {
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const updateBlog = async (req, res) => {
+  const { blog_id } = req.params;
+  const data = req.body;
+  try {
+    data.author_id = req.user_id;
+    const uploadRes = await cloudinary.uploader.upload(data.cover_image);
+    data.cover_image = uploadRes.secure_url;
+    await createBlogValidator.validateAsync(data);
+    const updatedBlog = await prisma.blogs.update({
+      where: { blog_id },
+      data,
+    });
+    return res.status(201).json({
+      success: true,
+      message: "Blog updated",
+      data: updatedBlog,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(501).json({
+      success: false,
+    });
   }
 };
 
