@@ -19,6 +19,7 @@ import express from "express";
 const router = express.Router();
 
 router.get("/me", verifyToken, getUser);
+router.get("/verification-token", verifyToken, getVerificationToken);
 router.get("/:id", verifyToken, verifyAdmin, getUserById);
 router.get("/", verifyToken, verifyAdmin, getAllUsers);
 router.post("/sign-up", signUp);
@@ -26,7 +27,6 @@ router.post("/sign-in", signIn);
 router.post("/sign-out", signOut);
 router.put("/", verifyToken, updateUser);
 
-router.get("/verification-token", verifyToken, getVerificationToken);
 router.post("/verify-email", verifyToken, verifyEmail);
 
 router.post("/reset-password-token", getResetPasswordToken);

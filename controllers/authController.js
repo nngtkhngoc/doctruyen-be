@@ -196,6 +196,7 @@ export const signUp = async (req, res) => {
       },
     });
 
+    console.log("SIGN UP >>>>");
     generateTokenAndSetCookie(newUser.user_id, newUser.role, res);
 
     return res
@@ -205,7 +206,7 @@ export const signUp = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map(err => err.message),
+        message: error.details.map((err) => err.message),
       });
     }
     console.log("Error signing up: ", error);
@@ -290,7 +291,6 @@ export const signOut = async (req, res) => {
 export const updateUser = async (req, res) => {
   const data = req.body;
   const user_id = req.user_id;
-  console.log(user_id);
   try {
     await updateUserValidator.validateAsync(data);
 
@@ -319,7 +319,7 @@ export const updateUser = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map(err => err.message),
+        message: error.details.map((err) => err.message),
       });
     }
     console.log("Error update user: ", error);
@@ -472,7 +472,7 @@ export const resetPassword = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map(err => err.message),
+        message: error.details.map((err) => err.message),
       });
     }
     console.log("Error reset password: ", error);
