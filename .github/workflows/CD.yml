@@ -36,6 +36,6 @@ jobs:
           cd ~/doctruyen/be
           tar -xzf be.tar.gz
           rm -rf be.tar.gz
-          npm ci
+          npm install
           /home/triuq/.nvm/versions/node/v20.0.0/bin/pm2 start server.js --name doctruyen-be
           EOF
