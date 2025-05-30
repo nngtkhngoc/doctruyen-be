@@ -1,0 +1,532 @@
+Top 50 Stories:
+. Trả về html và có dùng tailwindcss. Truyện thứ 0.
+      ID truyện cmajm6elu0023cv3dne3tzq22
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746965540/vwvgw1qtmu9vzs5up4bh.jpg
+      Tên truyện: Vang bóng một thời
+      Số lượt thích: 1
+      Tỉ lệ đánh gía: 0
+      Mô tả: Vang Bóng Một Thời viết năm 1940 đã được dư luận chung coi như một trong những tác phẩm hay và nổi tiếng nhất của nền văn chương Việt Nam, cũng là một trong những tác phẩm được nhắc tới nhiều nhất, được coi như ngang hàng với Hồn Bướm Mơ Tiên của Khái Hưng, Ðôi Bạn của Nhất Linh
+      Link: http://localhost:5173/story/cmajm6elu0023cv3dne3tzq22
+      Thể loại: 
+ Truyện thứ 1.
+      ID truyện cmajlbpa1001mcv3doxckzl71
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1747966397/xvo0pzy0ju6v4vzzrp3k.jpg
+      Tên truyện: Đất Rừng Phương Namm
+      Số lượt thích: 1
+      Tỉ lệ đánh gía: 0
+      Mô tả: Câu chuyện mượn hình ảnh một cậu bé bị lưu lạc trong thời kỳ kháng chiến chống Pháp ở Nam bộ để giới thiệu “Đất rừng Phương Nam”. Nơi đó, một vùng đất vô cùng giàu có, hào phóng và hùng vĩ với những con người trung hậu, trí dũng, một lòng một dạ theo kháng chiến.
+“Đất rừng phương Nam” của Đoàn Giỏi như một xã hội của miền sông nước Tây Nam bộ thu nhỏ. Bởi ở nơi đó, người đọc đã tìm thấy hình ảnh người dân của vùng đất phương Nam từ sông Tiền, sông Hậu trải dài đến Kiên Giang – Rạch Giá, rồi xuống tận rừng U Minh, sau đó dừng lại ở Năm Căn Cà Mau.
+Bối cảnh trong “Đất rừng phương Nam” là cả một đất trời thiên nhiên ưu đãi, cánh đồng bát ngát mênh mông, sóng nước rì rầm, rừng rậm bạt ngàn trù phú, thú rừng hoang dã muôn loài… Có thể nói truyện đã mang đến cho người đọc nhiều thú vị bất ngờ.
+      Link: http://localhost:5173/story/cmajlbpa1001mcv3doxckzl71
+      Thể loại: 
+ Truyện thứ 2.
+      ID truyện cmajxdnhk004fbt2vf24xtz0o
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1747231302/uacgnzml3x1sg0fhkqfi.jpg
+      Tên truyện: Tắt đèn
+      Số lượt thích: 1
+      Tỉ lệ đánh gía: 0
+      Mô tả: Mở đầu tác phẩm là không khí căng thẳng, ngột ngạt của một làng quê trong những ngày sưu thuế. Cổng làng đóng lại, công việc cày bừa đình đốn, bọn lý trưởng, trương tuần chửi bới, quát tháo om sòm; Mấy tên cai lệ, lính cơ tay thước, roi song, dây thừng đi tróc người thiếu thuế. Tiếng trống, mõ, tù và inh ỏi, tiếng thét lác, đánh đập, tiếng kêu khóc thảm thiết vang lên như trong một cuộc săn người.
+Gia đình chị Dậu thuộc loại “nhất nhì trong hạng cùng đinh” nên mấy hôm nay, chị phải chạy vạy ngược xuôi để có tiền nộp suất sưu cho anh Dậu. Bọn nhà giàu chẳng những không cho chồng chị vay mượn mà còn nhiếc móc, đe dọa. Anh Dậu đang ốm cũng bị bọn tay sai xông đến đánh trói, lôi ra đình cùm kẹp. Chị đành phải rứt ruột đem cái Tý, đứa con gái đầu lòng lên bảy bán cho lão Nghị Quế bên thôn Đoài. Vợ chồng lão giàu có mà keo kiệt, tàn ác, đã lợi dụng tình cảnh khốn cùng của chị, mua cái Tý và cả một ổ chó mà chỉ trả hai đồng bạc! Cộng với mấy hào bán gánh khoai, chị tưởng vừa đủ nộp suất sưu và chồng được tha về; Ngờ đâu, bọn lý dịch lại bắt chị phải nộp cả suất sưu của người em chồng đã chết từ năm ngoái! Thật là cùng đường. Giữa đình làng, tiếng kêu uất ức của chị vang lên thảm thiết.
+      Link: http://localhost:5173/story/cmajxdnhk004fbt2vf24xtz0o
+      Thể loại: 
+ Truyện thứ 3.
+      ID truyện cmakkimrp0000a02vwyroyg85
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1747023218/tafaepvz7sfm0u0isjj4.jpg
+      Tên truyện: Sơn Thôn Mỹ Thực Gia
+      Số lượt thích: 1
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức đọc truyện chữ hay Sơn Thôn Mỹ Thực Gia của tác giả Hoàng Y – một tuyệt phẩm thuộc thể loại tiên hiệp, huyền huyễn, linh dị đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmakkimrp0000a02vwyroyg85
+      Thể loại: 
+ Truyện thứ 4.
+      ID truyện cmak1jyk5001esx8gw3h4e0kb
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746991364/rhcujwofnajh2h5rmr3d.jpg
+      Tên truyện: Bóng Đêm Trên Sông Hương
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Một bí ẩn diễn ra tại dòng sông nổi tiếng.
+      Link: http://localhost:5173/story/cmak1jyk5001esx8gw3h4e0kb
+      Thể loại: 
+ Truyện thứ 5.
+      ID truyện cmajil06g000kcv3d3zj7h39d
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746959503/d96xgpaeftzaotrxzvxg.jpg
+      Tên truyện: Tuổi thơ dữ dội
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Phùng Quán (1932 – 1995), sinh ra tại Thừa Thiên – Huế, Ông là một nhà văn, nhà thơ Việt Nam. Ông bắt đầu viết trong khoảng thời gian của cuộc chiến tranh Đông Dương. Năm 1988, cuốn tiểu thuyết Tuổi thơ dữ dội của ông được xuất bản và nhận giải thưởng văn học Thiếu nhi của Hội nhà văn Việt Nam vào hai năm sau đó.
+Ngoài thể loại văn xuôi, ông còn viết những bài thơ thể hiện nỗi buồn của cuộc đời, một tâm hồn yêu nước, thương nòi, ngay thẳng và chứng kiến nhiều bất công dối trá.
+Tuổi thơ dữ dội là cuốn sách không những chứa đựng một câu chuyện đầy xúc động mà lối viết của Phùng Quán còn rất hóm hỉnh, thông minh. Mình tin rằng Tuổi thơ dữ dội là chất liệu rất tuyệt vời để giáo dục các em nhỏ thời nay về lòng yêu nước cũng như những phẩm chất đạo đức tốt đẹp, hiếm có. 
+      Link: http://localhost:5173/story/cmajil06g000kcv3d3zj7h39d
+      Thể loại: 
+ Truyện thứ 6.
+      ID truyện cmajjlyqh000ucv3di9wxb9nm
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746961227/u4kicvbtnu1uieteywzn.jpg
+      Tên truyện: 451 Độ F
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Hãy mường tượng một thế giới nơi truyền hình thống trị và văn chương ngấp nghé trên bờ tuyệt chủng, nơi thông tin nông cạn được tung hô còn tri thức và ý tưởng thì bị ruồng rẫy, nơi tàng trữ sách là phạm pháp, ta có thể bị bắt chỉ vì tản bộ trên vỉa hè, còn nhiệm vụ của những người lính không phải cứu hỏa mà là châm mồi cho những đám cháy…
+
+Khi khắc họa cái xã hội giả tưởng ấy qua con mắt nhìn khủng hoảng niềm tin của anh lính phóng hỏa Montag, Ray Bradbury chắc không thể ngờ vào tính tiên tri khủng khiếp của cuốn sách. Xã hội chúng ta đang sống ngày nay giống với những gì Bradbury mô tả đến rùng mình: một nền văn minh lệ thuộc quá nhiều vào truyền thông, giải trí và công nghệ. Bởi lẽ đó, hơn sáu chục năm kể từ lần đầu xuất bản, 451 độ F vẫn đủ sức khiến bất kỳ ai đọc nó phải sửng sốt và choáng váng.
+      Link: http://localhost:5173/story/cmajjlyqh000ucv3di9wxb9nm
+      Thể loại: 
+ Truyện thứ 7.
+      ID truyện cmajk81z00010cv3d952piupy
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746962258/xtcujzph9nabknkxjv2u.jpg
+      Tên truyện: Chí Tôn Tu La
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Chí Tôn Tu La của tác giả Thập Nguyệt Lưu Niên – một tuyệt phẩm thuộc thể loại tiên hiệp, huyền huyễn, khác đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajk81z00010cv3d952piupy
+      Thể loại: 
+ Truyện thứ 8.
+      ID truyện cmajkmy9y0018cv3d0601iie8
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746962953/c3uy2pqixakazavobivm.jpg
+      Tên truyện: Đan Đạo Tông Sư
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức web truyện Đan Đạo Tông Sư của tác giả Chỉ Thị Tiểu Hà Mễ – một tuyệt phẩm thuộc thể loại huyền huyễn đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajkmy9y0018cv3d0601iie8
+      Thể loại: 
+ Truyện thứ 9.
+      ID truyện cmajkn0jh001acv3dnybgeaak
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746962956/huhsayw6avvb7dahhpvk.jpg
+      Tên truyện: Phía Sau Nghi Can X
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Khi nhấn chuông cửa nhà nghi can chính của một vụ án mới, điều tra viên Kusanagi không biết rằng anh sắp phải đương đầu với một thiên tài ẩn dật. Kusanagi càng không thể ngờ rằng, chỉ một câu nói vô thưởng vô phạt của anh đã kéo người bạn thân, Manabu Yukawa, một phó giáo sư vật lý tài năng, vào vụ án. Và điều làm sững sờ nhất, đó là vụ án kia chẳng qua cũng chỉ như một bài toán cấp ba đơn giản, tuy nhiên ấn số X khi được phơi bày ra lại không đem đến hạnh phúc cho bất cứ ai…
+Với một giọng văn tỉnh táo và dung dị, Higashino Keigo đã đem đến cho độc giả hơn cả một cuốn tiểu thuyết trinh thám. Mô tả tội ác không phải điều hấp dẫn nhất ở đây, mà còn là những giằng xé nội tâm thầm kín, những nhân vật bình dị, và sự quan tâm sâu sa tới con người. Tác phẩm đã đem lại cho Higashino Keigo Giải Naoki lần thứ 134, một  giải thưởng văn học lâu đời sánh ngang giải Akutagawa tại Nhật.
+      Link: http://localhost:5173/story/cmajkn0jh001acv3dnybgeaak
+      Thể loại: 
+ Truyện thứ 10.
+      ID truyện cmajpc6z1004icv3d99d1dzd7
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746970849/axyvnnsy51m08zvyqaft.jpg
+      Tên truyện: Bá thiên võ hồn
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức truyện chữ Bá thiên võ hồn của tác giả Thiên Lí Mục Trần – một tuyệt phẩm thuộc thể loại huyền huyễn đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajpc6z1004icv3d99d1dzd7
+      Thể loại: 
+ Truyện thứ 11.
+      ID truyện cmajptuqq004pcv3dqk0eeyhl
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746971673/jedgezfrm7rnygyvldrx.jpg
+      Tên truyện: Thôn Thiên Long Vương
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức mê truyện Thôn Thiên Long Vương của tác giả Hoa Hỏa Man Đầu – một tuyệt phẩm thuộc thể loại huyền huyễn đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajptuqq004pcv3dqk0eeyhl
+      Thể loại: 
+ Truyện thứ 12.
+      ID truyện cmajw60od001nbt2vnpbirork
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746982318/o62niysvtdlvxvjacp2d.jpg
+      Tên truyện: Tiên hiệp: Phàm Nhân Tu Tiên
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Phàm Nhân Tu Tiên là một câu chuyện Tiên Hiệp kể về Hàn Lập - Một người bình thường nhưng lại gặp vô vàn cơ duyên để bước đi trên con đường tu tiên, không phải anh hùng - cũng chẳng phải tiểu nhân, Hàn Lập từng bước khẳng định mình... Liệu Hàn Lập và người yêu có thể cùng bước trên con đường tu tiên và có một cái kết hoàn mỹ? Những thử thách nào đang chờ đợi bọn họ?
+      Link: http://localhost:5173/story/cmajw60od001nbt2vnpbirork
+      Thể loại: 
+ Truyện thứ 13.
+      ID truyện cmajlscnp001wcv3d6crn15wx
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746964884/lvto0eosuk1mfoaxxpil.jpg
+      Tên truyện: Số Đỏ
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Trong Số đỏ, một tiểu thuyết hoạt kê, Vũ Trọng Phụng đả kích cay độc cái xã hội tư sản bịp bợm, đang chạy theo lối sống văn minh rởm, hết sức lố lăng thối nát. Tác phẩm này cũng đả kích phong trào được thực dân khuyến khích như: phong trào Âu hoá, vui vẻ trẻ trung, giải phóng phụ nữ, thể dục thể thao, chấn hưng Phật giáo và khẩu hiệu Bình dân dối gạt của bọn cơ hội đương thời…
+Một đóng góp hết sức to lớn của Vũ Trong Phụng với tác phẩm này là đã xây dựng được những nhân vật trở thành điển hình về mặt tâm lý xã hội mà đến hôm nay bóng dáng những nhân vật ấy vẫn không mất hẳn, vẫn còn quanh quẩn ở bên cạnh cúng ta, đó là những Xuân Tóc đỏ, bà Phó Đoan, em Chã, ông TYPN, cô Tuyết, cụ cố Hồng biết rồi, khổ lắm, nói mãi…
+      Link: http://localhost:5173/story/cmajlscnp001wcv3d6crn15wx
+      Thể loại: 
+ Truyện thứ 14.
+      ID truyện cmajmr6hi002acv3dgzfo6mxa
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746966510/q4ulybn7ywiloex9crxi.jpg
+      Tên truyện: Tuyển tập Nam Cao
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Đời văn Nam Cao không dài. Trên mười năm sáng tác ở cả hai thời kỳ trước và sau Cách mạng, Nam Cao đã để lại nhiều tác phẩm có giá trị. Thời gian trôi qua, tác phẩm của Nam Cao như càng bộc lộ thêm những phẩm chất mới, những giá trị mới. Chúng ta càng thêm yêu quý ông, một tâm hồn trung thực và cao đẹp trong cuộc đời cũng như trên trang sách; một nhà văn chiến sĩ với ý nghĩa đích thực và trọn vẹn của danh hiệu này.
+      Link: http://localhost:5173/story/cmajmr6hi002acv3dgzfo6mxa
+      Thể loại: 
+ Truyện thứ 15.
+      ID truyện cmajnwo4r002qcv3d350tdih0
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746968445/effybxisa2et64qccypk.jpg
+      Tên truyện: Những Chuyện Kể Của Beedle Người Hát Rong
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Những chuyện kể của Beedle Người Hát Rong gồm năm câu chuyện thần tiên với những phép thuật lạ lùng độc đáo, những tình thuống căng thẳng hồi hộp sẽ làm say mê độc giả của mọi lứa tuổi. Đặc biệt sau mỗi câu chuyện có phần bình luận của giáo sư Albus Dumbledore.
+
+Với những suy nghĩ sâu sắc ý nhị và phần hé lộ thông tin về cuộc sống tại trường Hogwarts, những lời bàn của giáo sư hy vọng sẽ được dân Muggles và giới phù thủy yêu thích như nhau.
+      Link: http://localhost:5173/story/cmajnwo4r002qcv3d350tdih0
+      Thể loại: 
+ Truyện thứ 16.
+      ID truyện cmajox0g60048cv3d4591yf1p
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746970141/f0f4m8rpfpb1mipelwhd.jpg
+      Tên truyện: Anne Tóc Đỏ Làng Avonlea
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Mới ngày nào cô bé Anne mặt tàn nhang và dễ kích động vừa mới đặt chân lên đảo Hoàng Tử Edward đã gây bao xôn xao, xáo trộn. Vậy mà giờ đây Anne đã vụt lớn thành một thiếu nữ mười sáu tuổi tươi tắn và xinh đẹp. Tuổi mười sáu đặt lên vai cô nhiều trọng trách: một cô giáo làng với tham vọng gieo những ước vọng đẹp đẽ trong tâm hồn trẻ thơ, một sáng lập viên Hội Cải tạo với mong muốn biến Avonlea thành một ngôi làng xanh sạch đẹp hơn, và một người bảo hộ bất đắc dĩ của hai đứa bé sinh đôi mồ côi rất đáng yêu nhưng cũng gây lắm chuyện đau đầu. Nhưng tuổi mười sáu vẫn không làm mất đi trong Anne tính lãng mạn vô phương cứu chữa cũng như chẳng khiến Anne thôi vướng vào vô số sự cố dở khóc dở cười chẳng khác gì những học trò nhỏ tinh nghịch và hăng hái của cô.
+
+Mười một, mười sáu rồi mười tám, Anne từng bước trưởng thành nhưng vẫn không thôi là Anne thánh thiện, lạc quan và căng tràn sức sống – nguồn cảm hứng tinh khôi quyến rũ biết bao thế hệ bạn đọc đủ mọi lứa tuổi trên khắp thế giới.
+      Link: http://localhost:5173/story/cmajox0g60048cv3d4591yf1p
+      Thể loại: 
+ Truyện thứ 17.
+      ID truyện cmajo6ktp002xcv3da17cw4h8
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746968908/ilyjfnmbptgyd74829wp.jpg
+      Tên truyện: Hai Vạn Dặm Dưới Đáy Biển
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Truyện viễn tưởng hay giả tưởng đã có khá nhiều nhà văn trên thế giới thể hiện trong tác phẩm của mình. Cũng là trí tưởng tượng, nhưng khác với truyện cổ tích hay thần thoại, tiểu thuyết giả tưởng thường mang đậm chất hiện thực, sống động.
+
+Hai Vạn Dặm Dưới Đáy Biển là một cuốn tiểu thuyết giả tưởng hiện đại không chỉ dành cho lứa tuổi thiếu nhi mà còn dành cho mọi thế hệ người đọc.
+
+Giáo sư Aronnax cùng anh bạn giúp việc vui tính Conseil là những người say mê khám phá sinh vật biển. Họ đã quyết định khám phá bí mật của quái vật biển. Được sự giúp đỡ của anh chàng thợ săn cá voi siêu hạng Ned Land, họ đã sẵn sàng một cuộc đi săn mà không biết có bao điều nguy hiểm đang chờ đợi mình ở phía trước. Bất ngờ đến với họ khi phát hiện ra con cá voi khổng lồ làm bằng sắt, nhưng tất cả đều không kịp, họ bị bắt làm tù binh trên chiếc tàu của thuyền trưởng Nemo. Và bất đắc dĩ, họ phải tham ra chuyến hành trình trên biển dài ngày. Một thế giới kỳ thú của đại dương đã hiện ra cùng cuộc phiêu lưu của đoàn thám hiểm và thuyền trưởng Nemo: Tham gia chuyến đi săn dưới đáy biển, thoát khỏi cá mập nguy hiểm, chạy trốn những người thổ dân, khai thác kim cương dưới đáy biển, khám phá nhiều vùng đất mới và cuối cùng là mắc kẹt trong núi băng ở Bắc Cực…
+      Link: http://localhost:5173/story/cmajo6ktp002xcv3da17cw4h8
+      Thể loại: 
+ Truyện thứ 18.
+      ID truyện cmajoa33p0035cv3dv7kypjw6
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746969071/mvtv7krftldsmvdrgbbg.jpg
+      Tên truyện: Ngày Cuối Cùng Của Một Tử Tù
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: 
+Tác phẩm ghi lại 24 giờ cuối cùng của cuộc đời một tử tù qua nhật ký của nhân vật xưng tôi – nhân vật không tên tuổi, lai lịch, không nguồn gốc tội lỗi, không ai biết anh ta phạm tội gì đến nỗi trở thành tử tù. Anh ta kể về không gian sinh tồn là nhà tù, những con người va chạm với anh ta trong 24 giờ đó là bạn tù, linh mục, cai ngục… và những người phụ nữ trong tâm tưởng gồm mẹ, vợ và con gái. Tất cả những suy tư đó đan xen với dòng suy nghĩ về việc anh ta sắp bị thi hành án.
+
+Tác phẩm này gần như chứa đừng đầy đủ phong cách, mô típ nhân vật và chủ đề quen thuộc trong sáng tác văn xuôi của Victor Hugo. Đặc biệt hơn nữa, có lẽ đây là tác phẩm chứa đựng nhiều tâm sự thầm kín, những nhức nhối khôn cùng của một nhà văn suốt đời đấu tranh cho quyền “được sống” của con người: án tử hình và sự xóa bỏ vĩnh viễn nó khỏi cuộc sống nhân loại.
+      Link: http://localhost:5173/story/cmajoa33p0035cv3dv7kypjw6
+      Thể loại: 
+ Truyện thứ 19.
+      ID truyện cmajoefmn003ccv3dlucj4m2m
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746969274/bxgou76dmik7dhixmzjm.jpg
+      Tên truyện: Những Tấm Lòng Cao Cả
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Những tấm lòng cao cả là một cuốn tiểu thuyết trẻ em của nhà văn người Ý Edmondo De Amicis. Lấy bối cảnh trong lúc nước Ý đang thống nhất cũng như nói về đề tài yêu nước.
+
+Xuyên suốt tiểu thuyết là những vấn đề xã hội như sự nghèo đói, Những tấm lòng cao cả được yêu chuộng vì văn phong giản dị và ý nghĩa giáo dục về tình nhân ái.Những tấm lòng cao cả  được viết theo hình thức nhật ký của Enrico Bottini, một cậu học trò 10 tuổi học tiểu học ở Ý. Gia đình cậu thuộc tầng lớp thượng lưu trong khi nhiều bạn cùng lớp lại xuất thân từ tầng lớp lao động. Cốt truyện diễn ra theo thứ tự thời gian xuyên suốt năm lớp 3 của Enrico. Ở đó Enrico đã được tiếp xúc với những cậu bé đủ mọi tính cách …
+
+Xen kẽ vào cuốn nhật kí của cậu bé Enrico là các truyện đọc hàng tháng (thầy giáo yêu cầu học sinh chép để đọc cho cả lớp), đây là những câu chuyện kể về tấm gương những thiếu niên dũng cảm của nước Ý, có những người hi sinh vì Tổ quốc như cậu bé trinh sát ở Lombardia, có người chết để cứu những người thân thiết như cậu bé ở Roma hay cậu bé người Sicilia, và cả những người có nhiều nghĩa cử cao đẹp…
+
+Qua Những tấm lòng cao cả, Amicis muốn gửi gắm đến các em thiếu nhi những bài học đạo đức sâu sắc cũng như vai trò quan trọng của nhà trường, cha mẹ trong việc dạy dỗ trẻ em.
+      Link: http://localhost:5173/story/cmajoefmn003ccv3dlucj4m2m
+      Thể loại: 
+ Truyện thứ 20.
+      ID truyện cmajom4hb003lcv3do7yo48xn
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746969633/nawug3arvypsnzyyygwx.jpg
+      Tên truyện: Tiếng Chim Hót Trong Bụi Mận Gai
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Tiếng Chim Hót Trong Bụi Mận Gai có thể được xem là tiểu thuyết nổi tiếng nhất của nữ văn sĩ người Úc Colleen McCullough, được xuất bản năm 1977.
+
+Tiếng Chim Hót Trong Bụi Mận Gai ngay khi vừa xuất bản đã được dịch ra nhiều thứ tiếng và được xếp ngang hàng với tác phẩm văn học kinh điển “Cuốn Theo Chiều Gió“. Nhưng ít ai biết được rằng, thời điểm tác phẩm ra đời, viết văn chỉ là nghề tay trái của Colleen McCollough, nhân viên y tế là nghề chính của bà.
+Colleen McCullough không phải là nhà văn chuyên nghiệp, trước đó hầu như không ai biết tiếng. Khi cuốn tiểu thuyết “Tiếng Chim Hót Trong Bụi Mận Gai” đem lại vinh quang cho tác giả thì Colleen McCullough chỉ là một nhân viên y tế bình thường. Bà sinh ở bang New South Wales (Australia) trong gia đình một công nhân xây dựng. Thuở nhỏ, Colleen mơ ước trở thành bác sĩ nhưng không có điều kiện để theo học trường đại học y. Bà đã thử làm một số nghề như thư viện, làm báo, công tác thư viện, dạy dỗ để tìm kiếm cơ hội trở lại nghề y.
+
+Năm 1974, bà viết tiểu thuyết đầu tay nhưng không có tiếng tăm. “Tiếng Chim Hót Trong Bụi Mận Gai” được thai nghén trong ngót 4 năm, rồi đầu mùa hè năm 1975, bà bắt tay vào viết một mạch trong 10 tháng. Suốt thời gian ấy, bầ vẫn túi bụi công việc ở bệnh viện, chỉ viết tác phẩm vào ban đêm và ngày chủ nhật.
+
+Vui sướng vì thành công nhưng Colleen không thích nổi danh mà chỉ muốn tìm một nơi yên tĩnh để tập trung sáng tác. Hòn đảo Norfork (Australia) với bờ biển hoang dại, tĩnh mịch và cảnh vật thiên nhiên đẹp tuyệt vời đã cuốn hút bà. Chính tại nơi này, bà đã gặp được Ric – người đã gắn bó suốt đời cùng bà.
+      Link: http://localhost:5173/story/cmajom4hb003lcv3do7yo48xn
+      Thể loại: 
+ Truyện thứ 21.
+      ID truyện cmajopeir003ucv3dbc08gh3a
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746969785/f5of7qa44vyjmy9yr8ta.jpg
+      Tên truyện: Những Ngày Thơ Ấu
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Người ta hay giấu giếm và che đậy sự thật, nhất là sự đáng buồn trong gia đình. Có lợi ích gì không?
+
+Những ngày thơ ấu mà Nguyên Hồng kể lại , tôi không muốn biết là có nên hay không, tôi chỉ thấy trong những kỉ niệm cứ đau đớn ấy sự rung động cực điểm của một tâm hồn trẻ dại, lạc loài trong những lề lối khắc nghiệt của một gia đình sắp tàn.
+
+Trên những trang mà Nguyên Hồng viết ra đây, chúng ta thấy nổi lên hình ảnh một người mẹ chịu khổ và âu yếm, một người mẹ hiền từ mà tác giả nói đến với tất cả tình yêu tha thiết của con người.
+      Link: http://localhost:5173/story/cmajopeir003ucv3dbc08gh3a
+      Thể loại: 
+ Truyện thứ 22.
+      ID truyện cmak1jxhy0010sx8gasusicxd
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746991362/zw9cpriglu80dzzwdwco.jpg
+      Tên truyện: Ánh Sáng Cuối Đường Hầm
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Niềm hy vọng trong tuyệt vọng.
+      Link: http://localhost:5173/story/cmak1jxhy0010sx8gasusicxd
+      Thể loại: 
+ Truyện thứ 23.
+      ID truyện cmajuig1j0000bt2v6z56kwlt
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746979539/megubopp2n0haps08fae.jpg
+      Tên truyện: Percy Jackson - Kẻ cắp tia chớp
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Chuyện gì sẽ xảy ra nếu các vị thần Olympia vẫn còn sống ở thế kỷ 21? Chuyện gì sẽ xảy ra nếu họ yêu và có con với người trần? Và những đứa con đó có thể trở thành những anh hùng vĩ đại - như Theseus, Jason và Hercules?
+
+Chuyện gì sẽ xảy ra nếu bạn là một trong số những đứa trẻ đó?
+
+Với việc khám phá ra thân phận bán thần của mình, cậu bé mười hai tuổi Percy Jackson đã bắt đầu lên đường thực thi nhiệm vụ cực kỳ nguy hiểm trong cuộc đời mình. Với sự giúp đỡ của thần rừng và con gái của nữ thần Athena - Annabeth, Percy đã đi khắp nước Mỹ để tìm bắt kẻ trộm vũ khí hủy diệt – tia chớp của thần Dớt. Trên khắp cuộc hành trình đó, cậu đã phải đối mặt với những kẻ thù hùng mạnh, những người đang muốn ngăn cản cậu thi hành nhiệm vụ. Vượt qua tất cả, cậu muốn gặp người cha mà cậu chưa bao giờ biết được. Và Oracle đã cảnh báo cho cậu về sự phản bội của một người bạn.
+      Link: http://localhost:5173/story/cmajuig1j0000bt2v6z56kwlt
+      Thể loại: 
+ Truyện thứ 24.
+      ID truyện cmajuttro0009bt2vw7aptvvz
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746980070/fcjytsikjj3vbppumloc.jpg
+      Tên truyện: Những Cuộc Phiêu Lưu Của Tom Shawyer
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Cuốn sách xoay quanh cậu bé Tom Sawyer với vô số trò nghịch ngợm thường ngày của cậu. Cậu là đứa cầm đầu vô vàn trò quậy phá quanh khu phố của mình. Cậu trốn học vào ngày thứ sáu và làm bẩn quần áo của mình khi đánh nhau, điều đó khiến cậu bị phải phải sơn hàng rào vào thứ bảy. Thế nhưng không gì làm khó được bản tính hiếu đậu của cậu, cậu đã lừa bạn bè phải làm thay công việc của mình bằng một nhận định tinh ranh: “Để làm cho ai đó ao ước một điều gì, chỉ cần làm nó khó có thể đạt được”.
+
+Cậu còn bày ra những trò tai quái khác như chữa mụn cóc ngoài nghĩa trang, đính hôn với Becky – cô bạn gái cậu thầm thích hay ra đảo tập làm cướp biển. Thế nhưng, trong chuyến phiêu lưu giả làm cướp biển ấy, cậu vô tình khám phá ra âm mưu che giấu của một nhóm tội phạm giết người. Từ đây, nhiều câu chuyện dở khóc dở cười xảy ra…
+      Link: http://localhost:5173/story/cmajuttro0009bt2vw7aptvvz
+      Thể loại: 
+ Truyện thứ 25.
+      ID truyện cmajv9o5s000ibt2vqt232usw
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746980809/t02qzdyjyt21i42lafjr.webp
+      Tên truyện: Kiêu hãnh và định kiến
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Truyện kể về cuộc đối đầu giữa Elizabeth Bennet, con gái của một gia đình trung lưu, và Fitzwilliam Darcy, một địa chủ giàu có. Mặc dù họ để tâm tìm hiểu lẫn nhau, tác giả đã đảo ngược ý niệm thông thường về "thuở ban đầu": tính kiêu hãnh về giai cấp và tài sản của mình cùng định kiến về vị thế thấp kém của gia đình Elizabeth khiến Darcy lúc đầu muốn tránh xa cô, trong khi cô Elizabeth cũng kiêu hãnh vì lòng tự trọng của mình và có định kiến về cung cách trưởng giả của Darcy, trở nên một người con gái không giống như những người con gái khác chung quanh Darcy.
+      Link: http://localhost:5173/story/cmajv9o5s000ibt2vqt232usw
+      Thể loại: 
+ Truyện thứ 26.
+      ID truyện cmajvic45000xbt2v1rqtf134
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746981213/rvlpjx3vbsgdn8vlxtan.jpg
+      Tên truyện: Kiếm Chủ Bát Hoang
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức tiểu thuyết Kiếm Chủ Bát Hoang của tác giả Hàn Vô Phong – một tuyệt phẩm thuộc thể loại huyền huyễn đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajvic45000xbt2v1rqtf134
+      Thể loại: 
+ Truyện thứ 27.
+      ID truyện cmajvfkdv000rbt2vvaf0d0gv
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746981084/r2cp34b25mqxiz095dkd.jpg
+      Tên truyện: Bên nhau trọn đời
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Khung bậc cảm xúc được thể hiện qua từng con chữ… qua từng câu nói của cả hai…
+
+Điều gì đã đồng thời làm cho trai tim của một người cô độc biết rung rinh.
+
+Điều hạnh phúc nhất trong cuộc đời có lẽ là có bao nhiêu khó khăn thử thách sự hiểu lầm vẫn được nắm tay nhau đến lúc đầu bạc răng long.
+
+Hà Dĩ Thâm Và Triệu Mặc Sênh, bọn họ đồng hành với nhau từ những ngày còn ngây ngô trong tình yêu giảng đường.
+
+Đến những ngày chia ly đầy ngược tâm đến đau lòng… đến lúc cả hai trưởng thành khi những khó khăn qua đi thì là lúc họ quay trở lại với nhau cùng gắn bó như thuở ban đầu.
+      Link: http://localhost:5173/story/cmajvfkdv000rbt2vvaf0d0gv
+      Thể loại: 
+ Truyện thứ 28.
+      ID truyện cmajvs4tf0017bt2vyovf2qu7
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746981670/sbgyvpxwvextozts0ylx.webp
+      Tên truyện: Vạn Long Thần Tôn
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức tiểu thuyết Vạn Long Thần Tôn của tác giả Hiểu Vị Ương – một tuyệt phẩm thuộc thể loại huyền huyễn đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajvs4tf0017bt2vyovf2qu7
+      Thể loại: 
+ Truyện thứ 29.
+      ID truyện cmajvzap2001fbt2vt3sqkvkg
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746982005/mbxon3h0znvglag8eiiq.jpg
+      Tên truyện: Chúa Tể Của Những Chiếc Nhẫn - Quyển 1: Đoàn Hộ Nhẫn
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: The Lord of the Rings là một trong những tác phẩm văn học huyền ảo vĩ đại nhất thế kỷ 20, kể về hành trình tiêu diệt "Chiếc Nhẫn Quyền Lực" – hiện thân của bóng tối và sự tha hóa – để cứu lấy Trung Địa (Middle-earth) khỏi bàn tay tàn ác của chúa tể bóng tối Sauron. Nhân vật chính là Frodo Baggins, một hobbit nhỏ bé nhưng kiên cường, cùng với những người bạn đồng hành trong "Đoàn hộ nhẫn" – bao gồm con người, yêu tinh, người lùn và pháp sư.
+
+Tác phẩm là sự kết hợp giữa sử thi, thần thoại, triết lý và tình bạn, mở ra một thế giới sống động với lịch sử, ngôn ngữ và bản đồ chi tiết.
+      Link: http://localhost:5173/story/cmajvzap2001fbt2vt3sqkvkg
+      Thể loại: 
+ Truyện thứ 30.
+      ID truyện cmak1jzcm001gsx8g6a2r6qrw
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746991365/p0vkzvb6dngb0pqy6kdk.jpg
+      Tên truyện: Linh Hồn Bị Đánh Cắp
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Câu chuyện về thầy trừ tà và hồn ma lang thang.
+      Link: http://localhost:5173/story/cmak1jzcm001gsx8g6a2r6qrw
+      Thể loại: 
+ Truyện thứ 31.
+      ID truyện cmajw7why001rbt2v02skq3pp
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746982406/ay9s7mbpyxxdy7wctwos.jpg
+      Tên truyện: Vạn Cổ Thần Đế
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức truyện chữ online Vạn Cổ Thần Đế của tác giả Phi Thiên Ngư – một tuyệt phẩm thuộc thể loại tiên hiệp, huyền huyễn, trọng sinh đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajw7why001rbt2v02skq3pp
+      Thể loại: 
+ Truyện thứ 32.
+      ID truyện cmajwecmz0023bt2vh7xfeb5m
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746982707/indfou9qdwslqmv9qiq3.jpg
+      Tên truyện: Sherlock Holmes Toàn Tập
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Sherlock Holmes Toàn Tập là tuyển tập đầy đủ các truyện ngắn và tiểu thuyết về vị thám tử lừng danh Sherlock Holmes – người sở hữu trí tuệ siêu phàm, khả năng suy luận sắc bén và tài quan sát phi thường. Cùng với người bạn thân thiết – bác sĩ Watson, Holmes phá giải hàng loạt vụ án ly kỳ, từ những vụ giết người tinh vi đến những âm mưu chính trị bí ẩn.
+
+Tác phẩm không chỉ lôi cuốn bởi cốt truyện hấp dẫn, mà còn thể hiện sự đối đầu giữa trí tuệ và tội ác, giữa ánh sáng và bóng tối của xã hội Anh cuối thế kỷ 19. Đây là bộ truyện trinh thám kinh điển, có ảnh hưởng sâu rộng đến văn học và điện ảnh suốt hơn một thế kỷ qua.
+      Link: http://localhost:5173/story/cmajwecmz0023bt2vh7xfeb5m
+      Thể loại: 
+ Truyện thứ 33.
+      ID truyện cmajwjvy3002kbt2vgsi8exdi
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746982966/irmziezhlibdbzzxhsd0.jpg
+      Tên truyện: Người Lạ Trong Gương
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Người đàn ông cô độc. Toby Temple vừa là một siêu sao vừa là kẻ tàn nhẫn, vừa được tôn sùng như một vị thánh lại vừa bị quấy rầy bởi bao sự nghi vẫn, ngờ vực.
+
+Người phụ nữ vỡ mộng. Jill Castle đến Hollywood để làm một ngôi sao - và phát hiện ra rằng nàng chỉ có thể có được nó bằng chính thân xác mình.
+
+Một thế giới của những kẻ lợi dụng lẫn nhau. Tất nhiên rồi. Song ở một khía cạnh khác, như tình yêu chẳng hạn, thì họ cũng thực sự cần đến nhau, muốn có nhau không bằng một sự tính toán nào hết...
+
+"Độc giả không thể chịu đựng được sự hồi hộp. Đỉnh điểm hấp dẫn, viễn cảnh ác mộng khiến cho mạch máu đông cứng lại... Sheldon là bậc thầy kể chuyện, một thiên tài về ngôn từ. Ông ấy có phong cách tinh tế, hấp dẫn, một người tiêu khiển không bao giờ thất bại khi làm mê hoặc người khác." - Forth Worth Star Telegram
+
+"Một câu chuyện cực kỳ hấp dẫn." - The Hollywood Reporter
+      Link: http://localhost:5173/story/cmajwjvy3002kbt2vgsi8exdi
+      Thể loại: 
+ Truyện thứ 34.
+      ID truyện cmajwlgk8002pbt2v5dll67bt
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746983039/eqm9q7vhheufklofjaha.jpg
+      Tên truyện: Long Huyết Võ Đế
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức truyện chữ hay Long Huyết Võ Đế của tác giả Lưu Thủy Vô Ngân – một tuyệt phẩm thuộc thể loại tiên hiệp, ngôn tình, huyền huyễn, khác đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajwlgk8002pbt2v5dll67bt
+      Thể loại: 
+ Truyện thứ 35.
+      ID truyện cmajwnmxr002xbt2vd0p7ut50
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746983140/kjg2v6xdfb02rh1o256t.jpg
+      Tên truyện: Bí Mật Dưới Ánh Trăng
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Một câu chuyện huyền bí về những bí mật ẩn giấu trong khu rừng cổ xưa, nơi ánh trăng dẫn lối cho những linh hồn lạc lối.
+      Link: http://localhost:5173/story/cmajwnmxr002xbt2vd0p7ut50
+      Thể loại: 
+ Truyện thứ 36.
+      ID truyện cmajwxz3o003bbt2v84dsvfoi
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746983623/aoxlbe3n4imefvlqcuwz.jpg
+      Tên truyện: Số đỏ
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Tiểu thuyết Số đỏ là câu chuyện kể về Xuân, thường gọi là “Xuân tóc đỏ”. Xuân là một cậu bé, một đứa trẻ lang thang đầu đường xó chợ, sống bằng nghề trèo me, trèo sấu kiếm tiền sống lay lắt qua ngày…
+
+Vì từ nhỏ mồ côi, không ai nuôi dạy, nên bản chất của Xuân bị tha hóa, hắn có những hành động vô giáo dục nên bị cớm bắt giam. Nhưng cơ may đến, Xuân được cứu thoát bới bà Phó Đoan - là một mụ me Tây vô cùng dâm đãng. Từ đó, Xuân làm phục vụ cho một cửa hàng Âu hóa của vợ chồng Văn Minh do mụ Phó Đoan giới thiệu cho, đây là một cửa hàng chuyên phục vụ phái đẹp, nơi luyện quần vợt của bà Phó Đoan và vợ Văn Minh. Xuân tóc đỏ được nhận danh hiệu “sinh viên trường thuốc” rồi danh hiệu “đốc tờ Xuân”, hắn học thuộc lòng những bài quảng cáo thuốc lậu, gia nhập với xã hội thuộc lưu, mở rộng các mối quan hệ với những nhân vật có thế lực, và được cô Tuyết em của Văn Minh con cụ cố Hồng yêu say đắm. Càng ngày hắn càng được nhiều người kính trọng và sợ hãi. Vô tình hắn gây ra cái chết của cụ cố tổ, và được gia đình nhà cụ cố vô cùng biết ơn vì điều này. Vợ chồng Văn Minh ra sức yêu chiều và tô vẽ cho Xuân, đồng thời cũng có ý định gã em gái là Tuyết cho Xuân dù biết quá khứ của hắn, nhưng vì Tuyết cũng đã mang cho mình cái danh hư hỏng nên đối với gia đình họ lại là niềm vui.
+
+Xuân đăng kí đi tranh giải quần vợt nhân dịp vua Xiêm tới Bắc Kì, hắn sử dụng rất nhiều thủ đoạn đê tiện để được thi đấu với đối thủ chính. Bằng cách hãm hại hai cầu thủ nổi tiếng trước khi trận đấu diễn ra, và cuối cùng hắn là người duy nhất để đấu với quán quân Xiêm. Vì để giữ mối giao hòa với nước Xiêm, nên đã yêu cầu Xuân thua. Kết thúc trận đấu, Xuân diễn thuyết giữa đám đông để mọi người hiểu hắn thua vì tổ quốc, hi sinh vì tổ quốc mình. Thế là hắn được tung hô, trở thành một anh hùng, một vĩ nhân. Được thưởng, được tham gia nhiều hội, và hắn trở thành con rể của cụ cố Hồng.
+      Link: http://localhost:5173/story/cmajwxz3o003bbt2v84dsvfoi
+      Thể loại: 
+ Truyện thứ 37.
+      ID truyện cmajwtfmh0037bt2vfdgdm4mi
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1747238931/rhpyhczssnbpguu7ultf.jpg
+      Tên truyện: Xích Long Võ Thần
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức truyện chữ online Xích Long Võ Thần của tác giả Du Du Đế Hoàng – một tuyệt phẩm thuộc thể loại huyền huyễn đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajwtfmh0037bt2vfdgdm4mi
+      Thể loại: 
+ Truyện thứ 38.
+      ID truyện cmajx30wx003lbt2vwr9u9gj3
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746983858/q8ksq5mtlzqxaauk9vma.jpg
+      Tên truyện: Long Ngạo Chiến Thần
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức truyện hot Long Ngạo Chiến Thần của tác giả Linh Linh Cửu – một tuyệt phẩm thuộc thể loại huyền huyễn đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajx30wx003lbt2vwr9u9gj3
+      Thể loại: 
+ Truyện thứ 39.
+      ID truyện cmajx6wjj003vbt2vmhitasjr
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746984039/yrjjc6gxkxmreegnysl5.jpg
+      Tên truyện: Toàn Dân Chuyển Chức: Tử Linh Pháp Sư! Ta Tức Là Thiên Tai
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức đọc truyện online Toàn Dân Chuyển Chức: Tử Linh Pháp Sư! Ta Tức Là Thiên Tai của tác giả Mạn Đồ Đích Trư – một tuyệt phẩm thuộc thể loại võng du đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajx6wjj003vbt2vmhitasjr
+      Thể loại: 
+ Truyện thứ 40.
+      ID truyện cmajxae1x004bbt2v7pok0i8h
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746984202/ugsss7xewxoczemep7ko.jpg
+      Tên truyện: Hành Trình Qua Dải Ngân Hà
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Một phi hành gia trẻ tuổi vô tình phát hiện một tín hiệu bí ẩn từ dải ngân hà xa xôi, dẫn anh vào một cuộc phiêu lưu đầy nguy hiểm và khám phá về nguồn gốc của vũ trụ.
+      Link: http://localhost:5173/story/cmajxae1x004bbt2v7pok0i8h
+      Thể loại: 
+ Truyện thứ 41.
+      ID truyện cmajxelbg004hbt2vd8aa5zee
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746984398/aqflc2eyxyl811jhhth1.png
+      Tên truyện: Xuyên thành áo choàng đại lão muội muội
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức đọc truyện Xuyên thành áo choàng đại lão muội muội của tác giả Cửu Tịch Công Tử – một tuyệt phẩm thuộc thể loại ngôn tình, huyền huyễn, đô thị, khác đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajxelbg004hbt2vd8aa5zee
+      Thể loại: 
+ Truyện thứ 42.
+      ID truyện cmajxosy0004vbt2v84it78my
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746984874/n4qzh0ptrd9j2nagvykg.jpg
+      Tên truyện: Những người khốn khổ
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Những người khốn khổ là câu chuyện về xã hội nước Pháp trong khoảng hơn 20 năm đầu thế kỷ 19 kể từ thời điểm Napoléon I lên ngôi và vài thập niên sau đó.
+
+Nhân vật chính của tiểu thuyết là Jean Valjean, một cựu tù khổ sai tìm cách chuộc lại những lỗi lầm gây ra thời trai trẻ.
+
+Bộ tiểu thuyết không chỉ nói tới bản chất của cái tốt, cái xấu, của luật pháp, mà tác phẩm còn là cuốn bách khoa thư đồ sộ về lịch sử, kiến trúc của Paris, nền chính trị, triết lý, luật pháp, công lý, tín ngưỡng của nước Pháp nửa đầu thế kỷ 19.
+
+Chính nhà văn Victor Hugo cũng đã viết cho người biên tập rằng: "Tôi có niềm tin rằng đây sẽ là một trong những tác phẩm đỉnh cao, nếu không nói là tác phẩm lớn nhất, trong sự nghiệp cầm bút của mình"
+      Link: http://localhost:5173/story/cmajxosy0004vbt2v84it78my
+      Thể loại: 
+ Truyện thứ 43.
+      ID truyện cmajxpsu6004xbt2vbppv8s2o
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746984921/yupudrvtbts5hhkj05no.jpg
+      Tên truyện: Nghịch Kiếm Cuồng Thần
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức truyện chữ Nghịch Kiếm Cuồng Thần của tác giả K Đồng Học – một tuyệt phẩm thuộc thể loại huyền huyễn đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajxpsu6004xbt2vbppv8s2o
+      Thể loại: 
+ Truyện thứ 44.
+      ID truyện cmak1ki0j001ksx8givu0xytn
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746991390/gi3sth8q16cvafijwuhx.jpg
+      Tên truyện: Chuyến Tàu Không Lối Về
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Tàu ma và những hành khách kỳ bí.
+      Link: http://localhost:5173/story/cmak1ki0j001ksx8givu0xytn
+      Thể loại: 
+ Truyện thứ 45.
+      ID truyện cmak1lu36001nsx8geuxyjf41
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746991453/udbqiyjkbkhxrx0g7rsv.jpg
+      Tên truyện: Mật Mã Phượng Hoàng
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Cuộc truy tìm cổ vật thần bí từ thời Ai Cập.
+      Link: http://localhost:5173/story/cmak1lu36001nsx8geuxyjf41
+      Thể loại: 
+ Truyện thứ 46.
+      ID truyện cmak1lugs001vsx8ghbxhe0o7
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746991453/dde7yeefeypllohja3l5.jpg
+      Tên truyện: Người Thổi Sáo Trong Rừng
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Âm nhạc dẫn lối cho linh hồn lạc lối.
+      Link: http://localhost:5173/story/cmak1lugs001vsx8ghbxhe0o7
+      Thể loại: 
+ Truyện thứ 47.
+      ID truyện cmajxtr1s005bbt2vrpwypor3
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746985105/cx5wapkbynvudiaje5c5.jpg
+      Tên truyện: Chiến Tranh Và Hòa Bình
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: L. Tônxtôi cũng đã từng băn khoăn: "Thú thật tôi hoàn toàn không biết một trăm năm sau liệu có ai đọc các tác phẩm của tôi không..." (Thư ông gửi cho nhà nghiên cứu người Anh Uyliam Rôtxôn ngày 27-12-1878).
+Lênin vĩ đại của chúng ta đã giải đáp nỗi băn khoăn đó: "Tônxtôi đã mất rồi và nước Nga trước cách mạng đã chìm vào dĩ vãng. Nhưng trong di sản của ông có cái không chìm vào dĩ vãng, có cái thuộc về tương lai. Di sản đó, giai cấp vô sản Nga đón lấy và nghiên cứu nó."
+Chiến Tranh Và Hòa Bình của L. Tônxtôi chính là loại tác phẩm thuộc về tương lai.
+Trong những ngày đánh trả mãnh liệt cuộc chiến tranh phá hoại man rợ bằng không quân của đế quốc Mỹ xâm lược, trên miền Bắc, sinh viên Việt Nam vẫn viết những đề tài nghiên cứu về chiến tranh nhân dân, về con đường đi tìm lý tưởng của Anđrây Bôncônxki, Pie Bêdukhôp trong tiểu thuyết Chiến Tranh Và Hòa Bình.
+Aragông cho biết: Đã có một thời ở Pháp, người ta không thể đi trên xe lửa mà không thấy những người đọc Chiến Tranh Và Hòa Bình của Tônxtôi. Cuốn tiểu thuyết này có lẽ là tác phẩm lớn nhất, chưa từng thấy, được người Pháp say mê vào những năm 1942-1943.
+Năm 1943, một nhà thơ lớn, một người cách mạng Thổ Nhĩ Kỳ bắt đầu dịch nửa đầu của Chiến Tranh Và Hòa Bình ở trong tù.
+Và kỳ diệu thay, năm 1943, giữa lòng thành phố Lêningrat anh hùng đang bị giặc Đức vây hãm ngặt nghèo, Chiến Tranh Và Hòa Bình được in lại với số lượng 100.000 cuốn!
+Năm 1960, một nhà văn Pháp đã nói rất hay về sức sống của tác phẩm Tônxtôi: "Khi đọc lại Chiến Tranh Và Hòa Bình tôi cảm thấy trước mắt tôi không phải là một giai đoạn đã qua mà là bí mật đã mất".
+      Link: http://localhost:5173/story/cmajxtr1s005bbt2vrpwypor3
+      Thể loại: 
+ Truyện thứ 48.
+      ID truyện cmajxv2ji005dbt2vgzi2kvtg
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746985167/yakacn1dnaxi7dptehde.jpg
+      Tên truyện: Bạo Tiếu Sủng Phi: Gia Ta Chờ Ngươi Bỏ Vợ
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bạn đang thưởng thức truyện online Bạo Tiếu Sủng Phi: Gia Ta Chờ Ngươi Bỏ Vợ của tác giả Phạm Khuyết – một tuyệt phẩm thuộc thể loại ngôn tình, xuyên không đầy mê hoặc. Ngay từ những chương đầu tiên, câu chuyện đã mở ra một thế giới kỳ bí, lôi cuốn và ngập tràn bất ngờ. Hành trình của các nhân vật sẽ đưa bạn từ hồi hộp đến vỡ òa cảm xúc trong từng khoảnh khắc. Đừng bỏ lỡ chuyến phiêu lưu kỳ thú này – những điều kỳ diệu đang đón chờ bạn phía trước!
+      Link: http://localhost:5173/story/cmajxv2ji005dbt2vgzi2kvtg
+      Thể loại: 
+ Truyện thứ 49.
+      ID truyện cmajxzghl005rbt2vdefix2op
+      Ảnh bìa: https://res.cloudinary.com/dygp21jaq/image/upload/v1746985372/gpsnquhzlosi0zixf9ky.jpg
+      Tên truyện: Anna Karenina
+      Số lượt thích: 0
+      Tỉ lệ đánh gía: 0
+      Mô tả: Bốn năm sau khi viết xong tiểu thuyết Chiến tranh và hòa bình, khoảng 19 tháng 03 năm 1873 Tolstoy bắt đầu viếtAnna Karenina. Sau khi hoàn thành, cuốn tiểu thuyết này đã đưa nhà văn lên một địa vị mới trên văn đàn văn học Nga và thế giới. Anna Karenina lập tức được xem là một trong những TruyenHD nhất của nên văn học nhân loại.
+Ý nghĩa xã hội và tác dụng nhận thức các vấn đề lớn do cuốn truyện đặt ra đã được thể hiện bằng một ngòi bút điêu luyện bậc thầy. Vượt ra ngoài khuôn khổ của một tấn thảm kịch nɠɵạı ŧìиɧ. Anna Karenina đã trở thành một bộ Bách khoa thư về đời sống xã hội. Bạn đã yêu Leo Tolstoy qua Chiến tranh và hòa bình? Vậy hãy đọc Anna Karenina để một lần nữa thấy được tư tưởng cũng như tài năng văn chương của ông.
+      Link: http://localhost:5173/story/cmajxzghl005rbt2vdefix2op
+      Thể loại: 

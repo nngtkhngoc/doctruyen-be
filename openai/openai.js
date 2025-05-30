@@ -1,8 +1,9 @@
 import OpenAI from "openai";
 import * as dotenv from "dotenv";
-import e from "express";
+
+import fs from "fs";
 dotenv.config();
-const openai = new OpenAI({
+const openai = new OpenAI({ 
   apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -17,6 +18,10 @@ async function wait_on_run(run, thread) {
   return run;
 }
 async function getAssistantResponse(prompt) {
+  prompt +=
+    "Khi trả lời, xin hãy không hiển thị các chú thích dạng [4:...top50.txt] hoặc bất kỳ tham chiếu nào đến nguồn tệp.";
+  prompt +=
+    "Nếu là hỏi về truyện thì hãy trả về HTML có sử dụng taildwindcss và trả dưới dạng list, từng truyện là từng cái div. mỗi truyện trên 1 hàng. Có thẻ image và chỉ chứa các thông tin như tên truyện, ảnh bìa. Bắt buộc phải dùng thẻ Link bọc thẻ img(to=Link trong truyện). Sử dụng nền trắng chữ đen";
   const thread = await openai.beta.threads.create();
   const message = await openai.beta.threads.messages.create(thread.id, {
     role: "user",
@@ -31,5 +36,32 @@ async function getAssistantResponse(prompt) {
   const lastMessage = messages.data[0].content[0].text.value;
   return lastMessage;
 }
+const uploadFileOpenAI = async (filepath) => {
+  const file = await openai.files.create({
+    file: fs.createReadStream(filepath),
+    purpose: "assistants",
+  });
+  return file;
+};
+const linkFileToVectorStore = async (vectorStoreId, file_ids) => {
+  const response = await openai.vectorStores.fileBatches.create(vectorStoreId, {
+    file_ids: file_ids,
+  });
+  return response;
+};
+const removeFilesByName = async (name) => {
+  const list = await openai.files.list();
 
-export { getAssistantResponse };
+  const filesToDelete = list.data.filter((file) => file.filename === name);
+  await Promise.all[
+    filesToDelete.forEach(async (file) => {
+      return await openai.files.del(file.id);
+    })
+  ];
+};
+export {
+  getAssistantResponse,
+  uploadFileOpenAI,
+  linkFileToVectorStore,
+  removeFilesByName,
+};
