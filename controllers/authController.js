@@ -169,19 +169,19 @@ export const signUp = async (req, res) => {
     if (checkEmail) {
       return res
         .status(409)
-        .json({ success: false, message: "Email already exists" });
+        .json({ success: false, message: "Email đã tồn tại" });
     }
 
     if (checkUsername) {
       return res
         .status(409)
-        .json({ success: false, message: "Username already exists" });
+        .json({ success: false, message: "Tên đăng nhập đã tồn tại" });
     }
 
     if (checkPhoneNumber) {
       return res
         .status(409)
-        .json({ success: false, message: "Phone number already exists" });
+        .json({ success: false, message: "Số điện thoại đã tồn tại" });
     }
     const hashedPassword = await bcrypt.hash(data.password, 10);
 
@@ -196,7 +196,6 @@ export const signUp = async (req, res) => {
       },
     });
 
-    console.log("SIGN UP >>>>");
     generateTokenAndSetCookie(newUser.user_id, newUser.role, res);
 
     return res
@@ -204,7 +203,7 @@ export const signUp = async (req, res) => {
       .json({ success: true, message: "Sign up sucesfully", data: newUser });
   } catch (error) {
     if (error.isJoi) {
-      return res.status(400).json({
+      return res.status(200).json({
         success: false,
         message: error.details.map((err) => err.message),
       });
@@ -220,7 +219,7 @@ export const signIn = async (req, res) => {
     if (!identifier || !password) {
       return res.status(400).json({
         success: false,
-        message: "Please provide identifier and password",
+        message: "Hãy điền đầy đủ các thông tin.",
       });
     }
 
@@ -237,14 +236,14 @@ export const signIn = async (req, res) => {
     if (!user) {
       return res
         .status(404)
-        .json({ success: false, message: "User not found" });
+        .json({ success: false, message: "Không tìm thấy người dùng" });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res
         .status(406)
-        .json({ success: false, message: "Incorrect password" });
+        .json({ success: false, message: "Mật khẩu không đúng" });
     }
 
     generateTokenAndSetCookie(user.user_id, user.role, res);
