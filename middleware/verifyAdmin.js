@@ -1,4 +1,5 @@
 export const verifyAdmin = async (req, res, next) => {
+  console.log("TRI");
   try {
     if (req.role != "ADMIN")
       return res.status(401).json({

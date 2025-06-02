@@ -2,10 +2,10 @@ import Joi from "@hapi/joi";
 
 export const signUpValidator = Joi.object({
   username: Joi.string().alphanum().min(6).max(20).required().messages({
-    "any.required": "Username is required",
-    "string.empty": "Username must not be empty",
-    "string.min": "Username must be at least 6 characters",
-    "string.max": "Username must not be over 20 characters",
+    "any.required": "Tên đăng nhập là bắt buộc",
+    "string.empty": "Tên đăng nhập không được để trống",
+    "string.min": "Tên đăng nhập phải có ít nhất 6 ký tự",
+    "string.max": "Tên đăng nhập không được vượt quá 20 ký tự",
   }),
   email: Joi.string()
     .email({
@@ -17,10 +17,10 @@ export const signUpValidator = Joi.object({
     )
     .required()
     .messages({
-      "string.empty": "Email must not be empty",
-      "string.email": "Email is unvalid",
-      "any.required": "Email is required",
-      "string.pattern.base": "Email is unvalid",
+      "string.empty": "Email không được để trống",
+      "string.email": "Email không hợp lệ",
+      "any.required": "Email là bắt buộc",
+      "string.pattern.base": "Email không hợp lệ",
     }),
   phone_number: Joi.string()
     .pattern(/^[0-9\s]+$/)
@@ -28,29 +28,29 @@ export const signUpValidator = Joi.object({
     .max(12)
     .allow("")
     .messages({
-      "any.required": "Phone number is required",
-      "string.empty": "Phone number must not be empty",
-      "string.pattern.base": "Phone number is unvalid",
-      "string.min": "Phone number must be at least 8 characters",
-      "string.max": "Phone number must not be over 12 characters",
+      "any.required": "Số điện thoại là bắt buộc",
+      "string.empty": "Số điện thoại không được để trống",
+      "string.pattern.base": "Số điện thoại không hợp lệ",
+      "string.min": "Số điện thoại phải có ít nhất 8 ký tự",
+      "string.max": "Số điện thoại không được vượt quá 12 ký tự",
     }),
   password: Joi.string()
     .pattern(new RegExp("^[a-zA-Z0-9]{3,30}$"))
     .min(6)
     .max(20)
     .messages({
-      "any.required": "Password is required",
-      "string.empty": "Password must not be empty",
-      "string.min": "Password must be at least 6 characters",
-      "string.max": "Password must not be over 20 characters",
-      "string.pattern.base": "Password is unvalid",
+      "any.required": "Mật khẩu là bắt buộc",
+      "string.empty": "Mật khẩu không được để trống",
+      "string.min": "Mật khẩu phải có ít nhất 6 ký tự",
+      "string.max": "Mật khẩu không được vượt quá 20 ký tự",
+      "string.pattern.base": "Mật khẩu không hợp lệ",
     }),
   confirm_password: Joi.string()
     .required()
     .valid(Joi.ref("password"))
     .messages({
-      "any.required": "Confirm password is required",
-      "any.only": "Password is not match",
+      "any.required": "Xác nhận mật khẩu là bắt buộc",
+      "any.only": "Mật khẩu xác nhận không khớp",
     }),
   role: Joi.string(),
   profile_pic: Joi.string(),
@@ -62,26 +62,26 @@ export const resetPasswordValidator = Joi.object({
     .min(6)
     .max(20)
     .messages({
-      "any.required": "Password is required",
-      "string.empty": "Password must not be empty",
-      "string.min": "Password must be at least 6 characters",
-      "string.max": "Password must not be over 20 characters",
-      "string.pattern.base": "Password is unvalid",
+      "any.required": "Mật khẩu mới là bắt buộc",
+      "string.empty": "Mật khẩu mới không được để trống",
+      "string.min": "Mật khẩu mới phải có ít nhất 6 ký tự",
+      "string.max": "Mật khẩu mới không được vượt quá 20 ký tự",
+      "string.pattern.base": "Mật khẩu mới không hợp lệ",
     }),
   confirm_new_password: Joi.string()
     .required()
     .valid(Joi.ref("new_password"))
     .messages({
-      "any.required": "Confirm password is required",
-      "any.only": "Password is not match",
+      "any.required": "Xác nhận mật khẩu là bắt buộc",
+      "any.only": "Mật khẩu xác nhận không khớp",
     }),
 });
 
 export const updateUserValidator = Joi.object({
   username: Joi.string().alphanum().min(6).max(20).messages({
-    "string.empty": "Username must not be empty",
-    "string.min": "Username must be at least 6 characters",
-    "string.max": "Username must not be over 20 characters",
+    "string.empty": "Tên đăng nhập không được để trống",
+    "string.min": "Tên đăng nhập phải có ít nhất 6 ký tự",
+    "string.max": "Tên đăng nhập không được vượt quá 20 ký tự",
   }),
   email: Joi.string()
     .email({
@@ -92,19 +92,19 @@ export const updateUserValidator = Joi.object({
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
     )
     .messages({
-      "string.empty": "Email must not be empty",
-      "string.email": "Email is unvalid",
-      "string.pattern.base": "Email is unvalid",
+      "string.empty": "Email không được để trống",
+      "string.email": "Email không hợp lệ",
+      "string.pattern.base": "Email không hợp lệ",
     }),
   phone_number: Joi.string()
     .pattern(/^[0-9\s]+$/)
     .min(8)
     .max(12)
     .messages({
-      "string.empty": "Phone number must not be empty",
-      "string.pattern.base": "Phone number is unvalid",
-      "string.min": "Phone number must be at least 8 characters",
-      "string.max": "Phone number must not be over 12 characters",
+      "string.empty": "Số điện thoại không được để trống",
+      "string.pattern.base": "Số điện thoại không hợp lệ",
+      "string.min": "Số điện thoại phải có ít nhất 8 ký tự",
+      "string.max": "Số điện thoại không được vượt quá 12 ký tự",
     }),
   fullname: Joi.string()
     .pattern(/^[A-Za-zÀ-Ỹà-ỹ\s]+$/)
@@ -112,9 +112,9 @@ export const updateUserValidator = Joi.object({
     .max(255)
     .allow("")
     .messages({
-      "string.pattern.base": "Fullname is unvalid",
-      "string.min": "Fullname must be at least 6 characters",
-      "string.max": "Fullname must not be over 255 characters",
+      "string.pattern.base": "Họ tên không hợp lệ",
+      "string.min": "Họ tên phải có ít nhất 6 ký tự",
+      "string.max": "Họ tên không được vượt quá 255 ký tự",
     }),
   profile_pic: Joi.string(),
 });

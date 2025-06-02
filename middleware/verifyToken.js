@@ -6,12 +6,14 @@ dotenv.config();
 
 export const verifyToken = async (req, res, next) => {
   const token = req.cookies.jwt;
-
+  console.log(req.cookies);
   if (!token)
     return res.status(401).json({ success: false, message: "Access Denied" });
 
   try {
+    console.log(token, "TOKEN");
     const verified = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(verified, "VC");
     if (!verified) {
       return res.status(401).json({ success: false, message: "Unauthorized" });
     }
@@ -23,7 +25,7 @@ export const verifyToken = async (req, res, next) => {
     req.user_id = user.user_id;
     req.role = user.role;
     req.is_banned = user.is_banned;
-
+    console.log("PASS");
     next();
   } catch (err) {
     console.log("Error verify token:", err);
