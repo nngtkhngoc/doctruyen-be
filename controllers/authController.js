@@ -205,7 +205,7 @@ export const signUp = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map(err => err.message),
+        message: error.details.map((err) => err.message),
       });
     }
     console.log("Error signing up: ", error);
@@ -319,7 +319,7 @@ export const updateUser = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map(err => err.message),
+        message: error.details.map((err) => err.message),
       });
     }
     console.log("Error update user: ", error);
@@ -472,7 +472,7 @@ export const resetPassword = async (req, res) => {
     if (error.isJoi) {
       return res.status(400).json({
         success: false,
-        message: error.details.map(err => err.message),
+        message: error.details.map((err) => err.message),
       });
     }
     console.log("Error reset password: ", error);
@@ -501,6 +501,50 @@ export const banUser = async (req, res) => {
       .json({ success: true, message: "Ban user successfully" });
   } catch (error) {
     console.log("Error ban user:", error);
+    return res
+      .status(500)
+      .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const getLikedStories = async (req, res) => {
+  const user_id = req.user_id;
+  try {
+    const likedStories = await prisma.story_likes.findMany({
+      where: { user_id },
+      include: {
+        story: {
+          include: {
+            story_genres: {
+              include: {
+                genre: true,
+              },
+            },
+          },
+        },
+      },
+      orderBy: {
+        liked_at: "desc",
+      },
+    });
+
+    return res.status(200).json({
+      success: true,
+      data: likedStories.map((like) => ({
+        story_id: like.story.story_id,
+        title: like.story.title,
+        author_name: like.story.author_name,
+        cover_image: like.story.cover_image,
+        description: like.story.description,
+        liked_at: like.liked_at,
+        genres: like.story.story_genres.map((sg) => ({
+          genre_id: sg.genre.genre_id,
+          name: sg.genre.name,
+        })),
+      })),
+    });
+  } catch (error) {
+    console.log("Error getting liked stories:", error);
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
