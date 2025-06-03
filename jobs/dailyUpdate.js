@@ -11,14 +11,21 @@ import {
   removeFilesByName,
 } from "../openai/openai.js";
 
-nodeCron.schedule("0 0 * * * *", async () => {
+nodeCron.schedule("0 * * * * *", async () => {
   const stories = await prisma.stories.findMany({
     orderBy: {
       like_counts: "desc",
     },
     take: 50,
+    include: {
+      story_genres: {
+        select: {
+          genre: true,
+        },
+      },
+    },
   });
-  let content = "Top 50 Stories:\n. Trả về html và có dùng tailwindcss.";
+  let content = "";
 
   stories.forEach((story, index) => {
     let text = ` Truyện thứ ${index}.
@@ -31,7 +38,10 @@ nodeCron.schedule("0 0 * * * *", async () => {
       Link: ${process.env.FRONTEND_URL}/story/${story.story_id}
       `;
     text += "Thể loại: ";
-    console.log(story.story_genres);
+    // console.log(story);
+    story.story_genres.forEach((genre) => {
+      text += `${genre.genre.name}, `;
+    });
     text += "\n";
     content += text;
   });

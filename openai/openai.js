@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 
 import fs from "fs";
 dotenv.config();
-const openai = new OpenAI({ 
+const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -13,15 +13,19 @@ function sleep(ms) {
 async function wait_on_run(run, thread) {
   while (run.status === "queued" || run.status === "in_progress") {
     run = await openai.beta.threads.runs.retrieve(thread.id, run.id);
+    console.log("Run status:", run.status);
     await sleep(1000);
   }
   return run;
 }
 async function getAssistantResponse(prompt) {
   prompt +=
-    "Khi trả lời, xin hãy không hiển thị các chú thích dạng [4:...top50.txt] hoặc bất kỳ tham chiếu nào đến nguồn tệp.";
+    "Tìm kiếm câu trả lời trong file top50.txt và docs.txt. Nếu không tìm thấy câu trả lời thì hãy trả lời là không có thông tin.";
+  prompt +=
+    "Khi trả lời, đừng hiển thị các tham chiếu đến nguồn như [4:top50.txt] hoặc bất kỳ đoạn chú thích nào trong ngoặc vuông.";
   prompt +=
     "Nếu là hỏi về truyện thì hãy trả về HTML có sử dụng taildwindcss và trả dưới dạng list, từng truyện là từng cái div. mỗi truyện trên 1 hàng. Có thẻ image và chỉ chứa các thông tin như tên truyện, ảnh bìa. Bắt buộc phải dùng thẻ Link bọc thẻ img(to=Link trong truyện). Sử dụng nền trắng chữ đen";
+
   const thread = await openai.beta.threads.create();
   const message = await openai.beta.threads.messages.create(thread.id, {
     role: "user",
@@ -30,8 +34,8 @@ async function getAssistantResponse(prompt) {
   let run = await openai.beta.threads.runs.create(thread.id, {
     assistant_id: process.env.OPENAI_ASSISTANT_ID,
   });
-  console.log(process.env.OPENAI_ASSISTANT_ID, "assistant_id");
   run = await wait_on_run(run, thread);
+
   const messages = await openai.beta.threads.messages.list(thread.id);
   const lastMessage = messages.data[0].content[0].text.value;
   return lastMessage;
