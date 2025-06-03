@@ -469,7 +469,6 @@ export const getSimilarStories = async (req, res) => {
 
     const genreIds = currentStory.story_genres.map((sg) => sg.genre.genre_id);
 
-    // Find stories with similar genres, excluding the current story
     const similarStories = await prisma.stories.findMany({
       where: {
         story_id: { not: story_id },

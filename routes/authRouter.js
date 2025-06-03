@@ -11,6 +11,7 @@ import {
   updateUser,
   banUser,
   getUserById,
+  getLikedStories,
 } from "../controllers/authController.js";
 import { verifyToken } from "../middleware/verifyToken.js";
 import { verifyAdmin } from "../middleware/verifyAdmin.js";
@@ -33,5 +34,7 @@ router.post("/reset-password-token", getResetPasswordToken);
 router.post("/reset-password/:reset_password_token", resetPassword);
 
 router.put("/ban", verifyToken, verifyAdmin, banUser);
+
+router.get("/liked-stories", verifyToken, getLikedStories);
 
 export default router;
