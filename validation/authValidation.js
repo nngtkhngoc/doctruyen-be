@@ -1,7 +1,7 @@
 import Joi from "@hapi/joi";
 
 export const signUpValidator = Joi.object({
-  username: Joi.string().alphanum().min(6).max(20).required().messages({
+  username: Joi.string().min(6).max(20).required().messages({
     "any.required": "Tên đăng nhập là bắt buộc",
     "string.empty": "Tên đăng nhập không được để trống",
     "string.min": "Tên đăng nhập phải có ít nhất 6 ký tự",
