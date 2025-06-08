@@ -290,14 +290,44 @@ export const signOut = async (req, res) => {
 export const updateUser = async (req, res) => {
   const data = req.body;
   const user_id = req.user_id;
+
   try {
     await updateUserValidator.validateAsync(data);
 
-    if (data.profile_pic) {
-      const uploadRes = await cloudinary.uploader.upload(data.profile_pic);
-      data.profile_pic = uploadRes.secure_url;
+    if (req.file) {
+      const streamifier = require("streamifier");
+
+      const streamUpload = () => {
+        return new Promise((resolve, reject) => {
+          const stream = cloudinary.uploader.upload_stream(
+            { resource_type: "image" },
+            (error, result) => {
+              if (result) {
+                resolve(result);
+              } else {
+                reject(error);
+              }
+            }
+          );
+
+          streamifier.createReadStream(req.file.buffer).pipe(stream);
+        });
+      };
+
+      try {
+        const uploadRes = await streamUpload();
+        data.profile_pic = uploadRes.secure_url;
+      } catch (error) {
+        console.error("Error uploading to Cloudinary:", error);
+        return res.status(500).json({
+          success: false,
+          message: "Error uploading profile picture",
+        });
+      }
     }
+
     console.log(data);
+
     const updatedUser = await prisma.users.update({
       where: { user_id },
       data,
