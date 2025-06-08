@@ -446,36 +446,72 @@ export const importExcel = async (req, res) => {
 export const getSimilarStories = async (req, res) => {
   const { story_id } = req.params;
   try {
-    const currentStory = await prisma.stories.findUnique({
-      where: { story_id },
-      include: {
-        story_genres: {
-          select: {
-            genre: {
-              select: {
-                genre_id: true,
-              },
-            },
-          },
-        },
+    const allStories = await prisma.stories.findMany({
+      select: {
+        story_id: true,
+        description: true,
       },
     });
 
-    if (!currentStory) {
+    const targetStory = allStories.find((story) => story.story_id === story_id);
+    if (!targetStory) {
       return res
         .status(404)
         .json({ success: false, message: "Story not found" });
     }
 
-    const genreIds = currentStory.story_genres.map((sg) => sg.genre.genre_id);
+    const documents = allStories.map((story) =>
+      story.description.toLowerCase()
+    );
+    const uniqueWords = [...new Set(documents.join(" ").split(/\s+/))];
+
+    const tf = documents.map((doc) => {
+      const words = doc.split(/\s+/);
+      return uniqueWords.map((word) => {
+        const count = words.filter((w) => w === word).length;
+        return count / words.length;
+      });
+    });
+
+    const idf = uniqueWords.map((word) => {
+      const docsWithWord = documents.filter((doc) => doc.includes(word)).length;
+      return Math.log(documents.length / (docsWithWord + 1));
+    });
+
+    const tfidf = tf.map((docTf) => docTf.map((tf, i) => tf * idf[i]));
+
+    const targetIndex = allStories.findIndex(
+      (story) => story.story_id === story_id
+    );
+    const targetVector = tfidf[targetIndex];
+
+    const similarities = tfidf.map((vector, i) => {
+      if (i === targetIndex) return -1;
+
+      const dotProduct = vector.reduce(
+        (sum, val, j) => sum + val * targetVector[j],
+        0
+      );
+      const magnitude1 = Math.sqrt(
+        vector.reduce((sum, val) => sum + val * val, 0)
+      );
+      const magnitude2 = Math.sqrt(
+        targetVector.reduce((sum, val) => sum + val * val, 0)
+      );
+
+      return dotProduct / (magnitude1 * magnitude2);
+    });
+
+    const topIndices = similarities
+      .map((sim, i) => ({ sim, i }))
+      .sort((a, b) => b.sim - a.sim)
+      .slice(0, 6)
+      .map((item) => item.i);
 
     const similarStories = await prisma.stories.findMany({
       where: {
-        story_id: { not: story_id },
-        story_genres: {
-          some: {
-            genre_id: { in: genreIds },
-          },
+        story_id: {
+          in: topIndices.map((i) => allStories[i].story_id),
         },
       },
       include: {
@@ -484,10 +520,6 @@ export const getSimilarStories = async (req, res) => {
             genre: true,
           },
         },
-      },
-      take: 6,
-      orderBy: {
-        rating_avg: "desc",
       },
     });
 
